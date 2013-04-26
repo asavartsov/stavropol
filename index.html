@@ -1,0 +1,109 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>stv</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- BEGIN .out -->
+<div class="out">
+
+	<!-- BEGIN .topper -->
+	<div class="topper">
+
+		<nav class="nav" role="navigation">
+			<ul>
+				<li><a href="#">События</a></li>
+				<li><a href="#">Работа</a></li>
+				<li><a href="#">Недвижимость</a></li>
+				<li><a href="#">Автомобили</a></li>
+				<li><a href="#">Объявления</a></li>
+				<li><a href="#">Справочник</a></li>
+				<li class="active"><a href="#">Почта</a></li>
+				<li><a href="#">Городской форум</a></li>
+			</ul>
+		</nav>
+
+		<ul class="profile">
+			<li><a href="#"><i class="icon icon-login"></i> Войти</a></li>
+			<li class="is-active"><a href="#">Зарегистрироваться</a></li>
+		</ul>
+
+	</div>
+	<!-- /.topper -->
+
+	<!-- BEGIN .header -->
+	<header class="header" role="banner">
+
+		<h1 class="header__logo"><a href="#" title="STV .Справочник Ставрополь">STV .Справочник Ставрополь</a></h1>
+
+		<div class="header__search">
+			<form>
+				<div class="header__what">
+					<strong>Что:</strong>
+					<input type="text" placeholder="Название, рубрика, телефон, сайт">
+				</div>
+				<div class="header__where">
+					<strong>Где:</strong>
+					<input type="text" placeholder="Улица, Адрес">
+				</div>
+				<button type="submit" class="btn btn-inverse"><i class="icon icon-search"></i>Найти</button>
+			</form>
+		</div>
+
+		<ul class="header__links">
+			<li><a href="#"><i class="icon icon-url"></i>Ссылка</a></li>
+			<li><a href="#"><i class="icon icon-location"></i>Карта</a></li>
+		</ul>
+
+	</header>
+	<!-- /.header -->
+
+	<!-- BEGIN .content -->
+	<div class="content" role="main">
+		<aside class="sidebar"></aside>
+	</div>
+	<!-- /.content -->
+
+</div>
+<!-- /.out -->
+
+
+
+<!-- BEGIN  out-->
+<!-- <div class="out">
+	<h2>If you are using grunt (<a href="https://github.com/akella/grunt-frontend-boilerplate">Grunt Boilerplate</a>), html-includes are like that:</h2>
+	<p>@@include('_part.html')</p>
+</div> -->
+<!-- END out-->
+
+<!-- BEGIN #Yandex-Map -->
+<div id="map"></div>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map ("map", {
+            center: [50.446019, 30.513318],
+            zoom: 16
+        });
+
+        myPlacemark = new ymaps.Placemark([50.446019, 30.513318], {
+            content: 'Киев!',
+            balloonContent: 'Мать городов русских'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+<!-- /#Yandex-Map -->
+</body>
+</html>

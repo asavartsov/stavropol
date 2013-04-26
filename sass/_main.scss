@@ -1,0 +1,219 @@
+@import "lib/base";
+// Normally mainpage styles
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#map{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.out{
+	position: relative;
+	z-index: 1000;
+}
+
+// icons
+.icon{
+	vertical-align: middle;
+	display: inline-block;
+}
+	.icon-login{ @include sized-sprite($icons, ico_login); }
+	.icon-search{ @include sized-sprite($icons, ico_search); }
+	.icon-url{ @include sized-sprite($icons, ico_url); }
+	.icon-location{ @include sized-sprite($icons, ico_location); }
+
+
+// wrapper block for navigation & authorization
+.topper{
+	height: 30px;
+	line-height: 30px;
+	background: #2c3d51;
+	color: #ddd;
+	padding-right: 85px;
+	@extend %clr;
+}
+	// main navigation
+	.nav{
+		float: left;
+		text-transform: uppercase;
+		li{
+			list-style: none;
+			float: left;
+			&.active{
+				a{
+					background: #fff;
+					color: #2c3b52;
+				}
+			}
+			a{
+				display: block;
+				height: 100%;
+				padding: 0 12px;
+				color: #ddd;
+				text-decoration: none;
+				&:hover{
+					background: #fff;
+					color: #2c3b52;
+				}
+			}
+		}
+	}
+	// authorization links
+	.profile{
+		float: right;
+		text-transform: uppercase;
+		.icon-login{
+			margin-top: -4px;
+			margin-right: 2px;
+		}
+		li{
+			list-style: none;
+			float: left;
+			margin-left: 10px;
+			&:first-child{
+				margin-left: 0;
+			}
+			&.is-active{
+				a{
+					color: #fff;
+					.icon-login{
+						@include sized-sprite($icons, ico_login_hover);
+					}
+				}
+			}
+		}
+		a{
+			color: #cfb300;
+			text-decoration: none;
+			&:hover{
+				color: #fff;
+				.icon-login{
+					@include sized-sprite($icons, ico_login_hover);
+				}
+			}
+		}
+	}
+
+
+// main header
+.header{
+	padding: 25px 50px 25px 70px;
+	@extend %clr;
+	background: #fff;
+}
+	.header__logo{
+		float: left;
+		margin-right: 20px;
+		a{
+			display: block;
+			@extend %hide-text;
+			@include sized-sprite($icons, logo);
+		}
+	}
+	.header__search{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		height: 40px;
+		line-height: 40px;
+		padding: 10px;
+		margin-top: 9px;
+		margin-right: 40px;
+		border-radius: 5px;
+		background: #ecf0f1;
+		color: #2c3b53;
+		&:before{
+			content: "";
+			position: absolute;
+			display: block;
+			border-style: solid;
+			border-color: transparent #ecf0f1 transparent transparent;
+			top: 50%;
+			left: -5px;
+			margin-top: -5px;
+			border-width: 5px 5px 5px 0;
+		}
+		input{
+			height: 20px;
+			line-height: 20px;
+			border: 1px solid #eee;
+			padding: 10px;
+			width: 250px;
+		}
+		.btn-inverse{
+			float: left;
+			margin-bottom: 0;
+			margin-top: 1px;
+			text-align: center;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			cursor: pointer;
+			color: #fff;
+			background: #95a5a6;
+			padding: 0 25px;
+			height: 40px;
+			line-height: 40px;
+			.icon-search{
+				margin-top: -4px;
+				margin-right: 5px;
+			}
+		}
+	}
+	.header__what,
+	.header__where{
+		float: left;
+		strong{
+			margin-right: 5px;
+			font-weight: bold;
+		}
+	}
+		.header__what{
+			margin-right: 20px;
+		}
+		.header__where{
+			margin-right: 10px;
+		}
+	.header__links{
+		@extend %clr;
+		float: right;
+		vertical-align: top;
+		margin-top: 32px;
+		li{
+			float: left;
+			list-style: none;
+			margin-left: 20px;
+			&:first-child{
+				margin-left: 0;
+			}
+			a{
+				color: #2c3b53;
+				text-decoration: dashed;
+			}
+		}
+		.icon{
+			margin-top: -2px;
+			margin-right: 5px;
+		}
+	}
+// content
+.content{
+
+}
+	// <aside>
+	.sidebar{
+		background: #fff;
+		width: 200px;
+		position: fixed;
+		top: 150px;
+		bottom: 0;
+		padding: 0 0 0 70px;
+	}
