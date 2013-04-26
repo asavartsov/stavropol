@@ -52,21 +52,21 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
 
 .topper { height: 30px; line-height: 30px; background: #2c3d51; color: #ddd; padding-right: 85px; }
 
-.nav { float: left; text-transform: uppercase; }
-.nav li { list-style: none; float: left; }
-.nav li.active a { background: #fff; color: #2c3b52; }
-.nav li a { display: block; height: 100%; padding: 0 12px; color: #ddd; text-decoration: none; }
-.nav li a:hover { background: #fff; color: #2c3b52; }
+.topper__nav { float: left; text-transform: uppercase; }
+.topper__nav li { list-style: none; float: left; }
+.topper__nav li.active a { background: #fff; color: #2c3b52; }
+.topper__nav li a { display: block; height: 100%; padding: 0 12px; color: #ddd; text-decoration: none; }
+.topper__nav li a:hover { background: #fff; color: #2c3b52; }
 
-.profile { float: right; text-transform: uppercase; }
-.profile .icon-login { margin-top: -4px; margin-right: 2px; }
-.profile li { list-style: none; float: left; margin-left: 10px; }
-.profile li:first-child { margin-left: 0; }
-.profile li.is-active a { color: #fff; }
-.profile li.is-active a .icon-login { background: url('../img/icons-s3637ea937d.png') 0 -168px no-repeat; width: 9px; height: 12px; }
-.profile a { color: #cfb300; text-decoration: none; }
-.profile a:hover { color: #fff; }
-.profile a:hover .icon-login { background: url('../img/icons-s3637ea937d.png') 0 -168px no-repeat; width: 9px; height: 12px; }
+.topper__profile { float: right; text-transform: uppercase; }
+.topper__profile .icon-login { margin-top: -4px; margin-right: 2px; }
+.topper__profile li { list-style: none; float: left; margin-left: 10px; }
+.topper__profile li:first-child { margin-left: 0; }
+.topper__profile li.is-active a { color: #fff; }
+.topper__profile li.is-active a .icon-login { background: url('../img/icons-s3637ea937d.png') 0 -168px no-repeat; width: 9px; height: 12px; }
+.topper__profile a { color: #cfb300; text-decoration: none; }
+.topper__profile a:hover { color: #fff; }
+.topper__profile a:hover .icon-login { background: url('../img/icons-s3637ea937d.png') 0 -168px no-repeat; width: 9px; height: 12px; }
 
 .header { padding: 25px 50px 25px 70px; background: #fff; }
 

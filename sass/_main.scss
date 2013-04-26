@@ -42,7 +42,7 @@ html, body{
 	@extend %clr;
 }
 	// main navigation
-	.nav{
+	.topper__nav{
 		float: left;
 		text-transform: uppercase;
 		li{
@@ -68,7 +68,7 @@ html, body{
 		}
 	}
 	// authorization links
-	.profile{
+	.topper__profile{
 		float: right;
 		text-transform: uppercase;
 		.icon-login{
