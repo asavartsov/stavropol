@@ -527,14 +527,14 @@ input{
 		min-height: 100%;
 		height: auto !important;
 		height: 100%;
-		margin: 0 0 -142px 140px;
+		margin: 0 0 -142px 86px;
 		z-index: 0;
 	}
 
 	// alt header
 	.header{
-		padding-top: 25px;
-		margin-left: -100px;
+		padding-top: 39px;
+		margin-left: -87px;
 		@extend %clr;
 		background: #fff;
 	}
@@ -557,11 +557,11 @@ input{
 		width: 260px;
 		color: #7f8c8d;
 		font-size: 13px;
-		margin-left: 100px;
+		margin-left: 85px;
 	}
 
 	.auth__title{
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 		position: relative;
 		p{
 			font-size: 20px;
@@ -571,6 +571,7 @@ input{
 		.title{
 			color: #2c3d51;
 			font-size: 36px;
+			line-height: 1.2;
 			display: inline-block;
 		}
 
@@ -582,13 +583,18 @@ input{
 	.form{
 		@include border-radius(4px);
 		background: #ecf0f1;
-		padding: 20px 0 0 0;
-		width: 427px;
+		padding: 24px 0 0 0;
+		width: 487px;
 		input{
-			width: 97%;
+			width: 96%;
 			height: 40px;
 			line-height: 40px;
+			font-size: 17px;
 			padding: 0 1%;
+			&.form__login{
+				width: 60%;
+				color: #94a5a5;
+			}
 		}
 		a{
 			font-size: 13px;
@@ -598,23 +604,49 @@ input{
 				text-decoration: underline;
 			}
 		}
+		span{
+			color: #2c3d51;
+			font-size: 16px;
+			margin-left: 10px;
+			display: inline-block;
+		}
 	}
 		.form__wrap{
-			margin: 0 30px;
+			margin: 0 38px;
 		}
 		.form__line{
-			margin-bottom: 20px;
+			margin-bottom: 24px;
 		}
 		.form__label{
 			font-size: 14px;
 			color: #444;
 			display: inline-block;
 			margin-bottom: 0.2em;
+			margin-left: 2px;
 		}
 		.form__request{
 			text-align: center;
+			margin-top: -15px;
 		}
-
+		.form__info{
+			color: #aaa;
+			font-size: 13px;
+			line-height: 1.2;
+			margin-top: 5px;
+		}
+		.formline__success{
+			.form__controls{
+				position: relative;
+				&:after{
+					@include sized-sprite($icons, ico_success);
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: -17px;
+					margin-top: -4px;
+				}
+			}
+		}
 		.formline__error{
 			.form__label{
 				font-size: 14px;
@@ -651,7 +683,7 @@ input{
 				width: 140px;
 				top: 5px;
 				right: -185px;
-				font-size: 13px;
+				font-size: 12px;
 				color: #ea4f2f;
 				a{
 					font-size: 13px;
@@ -671,6 +703,7 @@ input{
 		top: 0;
 		bottom: 0;
 		margin-left: 25px;
+		margin-top: 95px;
 	}
 
 }
@@ -686,10 +719,10 @@ input{
 	height: 30px;
 	line-height: 30px;
 	display: inline-block;
-	padding: 0 19px;
+	padding: 0 8px;
 	position: relative;
-	top: -20px;
-	left: 20px;
+	top: -23px;
+	left: 10px;
 	text-transform: uppercase;
 }
 
@@ -720,7 +753,6 @@ input{
 }
 
 .socials{
-	margin-top: 107px;
 	.h1{
 		text-transform: uppercase;
 		color: #7f8c8d;

@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>stv - login-error</title>
+	<title>stv - reg-error</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/jquery.js"></script>
@@ -29,35 +29,51 @@
 		<div class="auth l-col1">
 			<!-- BEGIN .auth__title -->
 			<div class="auth__title">
-				<h1 class="title">Входите
+				<h1 class="title">Зарегистрируйтесь
 				</h1>
-				<a href="#" class="btn btn-warining">Я хочу зарегистрироваться</a>
-				<p>мы рады вас видеть снова</p>
+				<a href="#" class="btn btn-warining">Я уже зарегистрирован</a>
+				<p>это займёт у вас не более минуты</p>
 			</div>
 			<!-- /.auth__title -->
 			<!-- BEGIN .form -->
 			<form class="form">
 				<div class="form__wrap">
-					<div class="form__line formline__error">
+					<div class="form__line">
+						<label class="form__label">Ваше имя</label>
+						<div class="form__controls">
+							<input type="text" value="Евгений">
+						</div>
+					</div>
+					<div class="form__line">
+						<label class="form__label">Фамилия</label>
+						<div class="form__controls">
+							<input type="text" value="Теслов">
+						</div>
+					</div>
+					<div class="form__line  formline__success">
 						<label class="form__label">Логин</label>
 						<div class="form__controls">
-							<input type="text" value="eteslov">
-							<div class="form__errorifno">К сожалению, логин или пароль не верные</div>
+							<input class="form__login" type="text" value="eteslov">
+							<span>@stv.ru</span>
 						</div>
 					</div>
 					<div class="form__line formline__error">
-						<label class="form__label" for="inputPassword">Пароль</label>
+						<label class="form__label">Пароль</label>
 						<div class="form__controls">
-							<input type="password" id="inputPassword"  value="●●●●●●">
-							<div class="form__errorifno">Попробуйте <a href="#">восстановить пароль</a></div>
+							<input type="password" value="●●●●●●">
+							<div class="form__errorifno">Извините, но допустипо использовать только латинские знаки</div>
 						</div>
 					</div>
-					<div class="form__line form__request">
-						<a href="#">Я забыл пароль</a>
+					<div class="form__line">
+						<label class="form__label">Дополнительная почта</label>
+						<div class="form__controls">
+							<input type="text">
+							<div class="form__info">Если вы забудете пароль, то сможете восстановить пароль на данный адрес и получить доступ к сайту.</div>
+						</div>
 					</div>
 				</div>
 				<div class="form__btn">
-						<button type="submit" class="btn btn-success">Войти</button>
+						<button type="submit" class="btn btn-success">Зарегистрироваться и создать резюме</button>
 				</div>
 			</form>
 			<!-- /.form -->
