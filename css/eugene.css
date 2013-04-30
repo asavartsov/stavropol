@@ -6,6 +6,6 @@
 .sidebar.is-hidden { left: -367px; }
 
 .sidebar-key { position: absolute; top: 50%; right: -21px; margin-top: -20px; width: 22px; height: 40px; line-height: 40px; background: #fcfcfc; border: 0; cursor: pointer; -webkit-border-radius: 0 3px 3px 0; -moz-border-radius: 0 3px 3px 0; -ms-border-radius: 0 3px 3px 0; -o-border-radius: 0 3px 3px 0; border-radius: 0 3px 3px 0; }
-.sidebar-key i { display: inline-block; background: url('../img/icons-sd7984a5fe3.png') 0 -275px no-repeat; width: 7px; height: 10px; }
+.sidebar-key i { display: inline-block; background: url('../img/icons-s7adc59b6e8.png') 0 -510px no-repeat; width: 7px; height: 10px; }
 
-.sidebar-key.is-active i { background: url('../img/icons-sd7984a5fe3.png') 0 -255px no-repeat; width: 7px; height: 10px; }
+.sidebar-key.is-active i { background: url('../img/icons-s7adc59b6e8.png') 0 -490px no-repeat; width: 7px; height: 10px; }
