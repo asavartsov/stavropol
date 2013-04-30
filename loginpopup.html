@@ -1,0 +1,233 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>stv - loginpopup</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/baron.js"></script>
+	<script src="js/common.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+</head>
+<body>
+
+<!-- BEGIN .out -->
+<div class="out">
+
+	<!-- BEGIN .topper -->
+	<div class="topper">
+
+		<nav class="topper__nav" role="navigation">
+			<ul>
+				<li><a href="#">События</a></li>
+				<li><a href="#">Работа</a></li>
+				<li><a href="#">Недвижимость</a></li>
+				<li><a href="#">Автомобили</a></li>
+				<li><a href="#">Объfявления</a></li>
+				<li><a href="#">Справочник</a></li>
+				<li class="active"><a href="#">Почта</a></li>
+				<li><a href="#">Городской форум</a></li>
+			</ul>
+		</nav>
+
+		<ul class="topper__profile">
+			<li class="is-active"><a href="#"><i class="icon icon-login"></i> Войти</a>
+				<!-- BEGIN .loginpopup -->
+				<div class="loginpopup">
+					<div class="loginpopup__socials">
+						<h1 class="title">Войти через соцсети</h1>
+						<ul>
+							<li class="socials__fb"><a href="#"><i class="icon icon-fb"></i></a></li>
+							<li class="socials__tw"><a href="#"><i class="icon icon-tw"></i></a></li>
+							<li class="socials__vk"><a href="#"><i class="icon icon-vk"></i></a></li>
+							<li class="socials__od"><a href="#"><i class="icon icon-od"></i></a></li>
+						</ul>
+					</div>
+					<form class="form">
+						<div class="form__wrap">
+							<div class="form__line">
+								<div class="form__controls">
+									<input type="text" placeholder="Логин">
+								</div>
+							</div>
+							<div class="form__line">
+								<div class="form__controls">
+									<input type="password" placeholder="Пароль">
+								</div>
+							</div>
+							<div class="form__line form__request">
+								<a href="#">Я забыл пароль</a>
+							</div>
+						</div>
+						<div class="form__btn">
+								<button type="submit" class="btn btn-success" disabled="">Войти</button>
+						</div>
+					</form>
+				</div>
+				<!-- /.loginpopup -->
+			</li>
+			<li><a href="#">Зарегистрироваться</a></li>
+		</ul>
+
+	</div>
+	<!-- /.topper -->
+
+	<!-- BEGIN .header -->
+	<header class="header" role="banner">
+
+		<h1 class="header__logo"><a href="#" title="STV .Справочник Ставрополь">STV .Справочник Ставрополь</a></h1>
+
+		<div class="header__search">
+			<form>
+				<strong>Что:</strong>
+				<input type="text" placeholder="Название, рубрика, телефон, сайт">
+				<strong>Где:</strong>
+				<input type="text" placeholder="Улица, Адрес">
+				<button type="submit" class="btn btn-inverse"><i class="icon icon-search"></i>Найти</button>
+			</form>
+		</div>
+
+		<ul class="header__links">
+			<li><a href="#"><i class="icon icon-url"></i>Ссылка</a>
+				<!-- BEGIN .header__links-popup -->
+				<div class="header__links-popup">
+					<div class="header__links-popup-wrap">
+						<span>Прямая ссылка на карту:</span>
+						<input type="text" readonly="readonly" value="maps.stv.ru/ly?qBd">
+					</div>
+				</div>
+				<!-- /.header__links-popup -->
+			</li>
+			<li><a href="#"><i class="icon icon-location"></i>Карта</a>
+				<!-- BEGIN .header__links-popup -->
+				<div class="header__links-popup header__links-popup_mod">
+					<div class="header__links-popup-wrap">
+						<ul>
+							<li><a href="#"><span class="mark-ya">Я</span>ндекс.Карты</a></li>
+							<li><a href="#"><span class="mark-2gis">2GIS</span>.Карты</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.header__links-popup -->
+			</li>
+		</ul>
+
+	</header>
+	<!-- /.header -->
+
+	<!-- BEGIN .content -->
+	<div class="content" role="main">
+		<!-- BEGIN .sidebar -->
+		<aside class="sidebar">
+
+		<!-- BEGIN .catalog -->
+		<div class="catalog">
+			<h1 class="catalog__title"><a href="#">Каталог организаций города</a></h1>
+			<!-- BEGIN .baron -->
+			<div class="baron__in">
+			    <div class="baron__scroller">
+				        <div class="container">
+							<!-- BEGIN .catalog__list -->
+							<ul class="catalog__list">
+								<li class="active"><a href="#">Аварийные / Справочные / Экстренные службы</a>
+									<ul>
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Автосервис / Автотовары</a></li>
+								<li><a href="#">Город / Власть</a></li>
+								<li><a href="#">Досуг / Развлечения / Общественное</a></li>
+								<li><a href="#">Интернет / Связь / Информационные технологии</a></li>
+								<li><a href="#">Коммунальные / Бытовые / Ритуальные услуги</a></li>
+								<li><a href="#">Компьютеры / Бытовая техника / Офисная техника</a></li>
+								<li><a href="#">Культура / Искусство / Религия</a></li>
+								<li><a href="#">Мебель / Фурнитура / Материалы</a></li>
+							</ul>
+							<!-- /.catalog__list -->
+				        </div>
+				        <div class="baron__scrollerbar-wrapper">
+				            <div class="baron__scrollerbar"></div>
+				        </div>
+			    </div>
+			</div>
+			<!-- /.baron -->
+		</div>
+		<!-- /.catalog -->
+		<button class="sidebar-key is-active js-sidebar-key"><i></i></button>
+		<!-- BEGIN .footer -->
+		<footer class="footer">
+			<div class="footer__info">Информация предоставлена <a href="#" title="2GIS"><i class="icon icon-2gis">2GIS</i></a></div>
+			<div class="footer__copyright"><span>&copy;</span> stv.ru, 2013</div>
+			<div class="footer__text"><a href="#">Информационный портал<br> Ставрополя</a></div>
+			<a href="#" class="plus">0+</a>
+		</footer>
+		<!-- /.footer -->
+
+		</aside>
+		<!-- /.sidebar -->
+	</div>
+	<!-- /.content -->
+
+</div>
+<!-- /.out -->
+
+
+
+
+<!-- BEGIN .tooltip -->
+<div class="tooltip" style="position:fixed; top:280px; left: 50%;">
+	<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
+	<div class="tooltip__tags"><a href="#">Автозапчасти для иномарок</a>, <a href="#">Автоаксессуары</a>, <a href="#">Автохимия</a>, <a href="#">Автостекло</a>, <a href="#">Интернет-магазины</a></div>
+	<div class="tooltip__info">
+		<p><a href="#">Ипподромская, 44</a></p>
+		<p><strong>+7 (383) 284-19-94</strong></p>
+		<p><strong>+7 (383) 287-50-42</strong></p>
+		<p>Пн—Вс: 9...20 часов (без обеда)</p>
+	</div>
+	<div class="tooltip__info">
+		<p><a href="#">partclub.ru</a></p>
+		<p><a href="#">info@partclub.ru</a></p>
+	</div>
+	<p><a href="#">Карточка организации</a></p>
+</div>
+<!-- /.tooltip -->
+
+<!-- BEGIN .pin -->
+<a href="#" class="pin" style="position:fixed; top:300px; left:850px;"><span>5</span></a>
+<a href="#" class="pin" style="position:fixed; top:400px; left:880px;"><span>4</span></a>
+<div class="pin" style="position:fixed; top:300px; left:1400px;"><span>3</span></div>
+<div class="pin" style="position:fixed; top:370px; left:1350px;"><span>2</span></div>
+<!-- /.pin -->
+
+<!-- BEGIN #Yandex-Map -->
+<div id="map"></div>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map ("map", {
+            center: [50.446019, 30.513318],
+            zoom: 16
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+<!-- /#Yandex-Map -->
+
+</body>
+</html>
