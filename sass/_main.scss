@@ -40,10 +40,17 @@ input{
 	display: inline-block;
 }
 	.icon-login{ @include sized-sprite($icons, ico_login); }
+
 	.icon-search{ @include sized-sprite($icons, ico_search); }
 	.icon-url{ @include sized-sprite($icons, ico_url); }
 	.icon-location{ @include sized-sprite($icons, ico_location); }
+
 	.icon-2gis{ @extend %hide-text; @include sized-sprite($icons, ico_2gis); }
+
+	.icon-fb{ @include sized-sprite($icons, ico_fb); }
+	.icon-tw{ @include sized-sprite($icons, ico_tw); }
+	.icon-vk{ @include sized-sprite($icons, ico_vk); }
+	.icon-od{ @include sized-sprite($icons, ico_od); }
 
 // wrapper block for navigation & authorization
 .topper{
@@ -578,7 +585,7 @@ input{
 		padding: 20px 0 0 0;
 		width: 427px;
 		input{
-			width: 98%;
+			width: 97%;
 			height: 40px;
 			line-height: 40px;
 			padding: 0 1%;
@@ -628,7 +635,43 @@ input{
 					border: 1px solid #eee;
 				}
 			}
+			.form__controls{
+				position: relative;
+				&:after{
+					@include sized-sprite($icons, ico_error);
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: -17px;
+					margin-top: -4px;
+				}
+			}
+			.form__errorifno{
+				position: absolute;
+				width: 140px;
+				top: 5px;
+				right: -185px;
+				font-size: 13px;
+				color: #ea4f2f;
+				a{
+					font-size: 13px;
+					color: #ea4f2f;
+					text-decoration: underline;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
 		}
+	.sidebar{
+		background: none;
+		width: auto;
+		position: relative;
+		padding: 0;
+		top: 0;
+		bottom: 0;
+		margin-left: 25px;
+	}
 
 }
 
@@ -674,4 +717,53 @@ input{
 	border: none;
 	height: 60px;
 	line-height: 60px;
+}
+
+.socials{
+	margin-top: 107px;
+	.h1{
+		text-transform: uppercase;
+		color: #7f8c8d;
+		font-size: 9px;
+		font-weight: normal;
+	}
+	ul{
+		margin-top: 20px;
+	}
+	li{
+		list-style: none;
+		text-transform: lowercase;
+		font-size: 16px;
+		color: #4a63ac;
+		margin-bottom: 15px;
+	}
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.icon{
+		margin-right: 6px;
+	}
+	.socials__fb{
+		a{
+			color: #4a63ac;
+		}
+	}
+	.socials__tw{
+		a{
+			color: #27a9e4;
+		}
+	}
+	.socials__vk{
+		a{
+			color: #2c4670;
+		}
+	}
+	.socials__od{
+		a{
+			color: #e57f18;
+		}
+	}
 }
