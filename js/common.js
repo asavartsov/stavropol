@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
 //  --------------- Baron scroll ------------------ //
-    if ($(".baron__in").length > 0) {
+    // if ($(".baron__in").length > 0) {
         baron({
             scroller: '.baron__in .baron__scroller',
             bar: '.baron__scrollerbar',
             barOnCls: 'baron',
         });
-    }
-    else {}
+    // }
+    // else {}
 
 // ---------- Show/hide sidebar -------------------- //
     $(".js-sidebar-key").click(function(){
