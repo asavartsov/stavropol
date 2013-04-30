@@ -1,6 +1,6 @@
 @import "lib/base";
 .sidebar {
-	@include transition(all 500ms linear);
+	@include transition(all 300ms linear);
 	.push {
 		height: 140px;
 	}
@@ -10,6 +10,12 @@
 	}
 	.footer {
 		position: relative;
+	}
+}
+.baron__scrollerbar {
+	&:hover,
+	&:active {
+		background: #d6d6d6;
 	}
 }
 .sidebar.is-hidden {
@@ -35,5 +41,43 @@
 .sidebar-key.is-active {
 	i {
 		@include sized-sprite($icons, arr1);
+	}
+}
+.search {
+	margin-left: 20px;
+	li {
+		list-style-type: none;
+	}
+}
+.sticker {
+	display: inline-block;
+	padding: 7px 9px;
+}
+.sticker_yellow {
+	background: #ffc700;
+	color: #fff;
+	@include border-radius(4px);
+}
+.accordion {
+	
+}
+.accordion__title {
+	position: relative;
+	display: inline-block;
+	color: #2c3d51;
+	cursor: pointer;
+	line-height: 1;
+	font-size: 14px;
+	border-bottom: 1px dotted;
+	i {
+		position: absolute;
+		left: -14px;
+		top: 5px;
+		@include sized-sprite($icons, arr3);
+	}
+}
+.accordion__title.is-active {
+	i {
+		@include sized-sprite($icons, arr4);
 	}
 }
