@@ -21,6 +21,19 @@ html, body{
 	z-index: 1000;
 }
 
+// input style
+input{
+	border: 1px solid #eee;
+	outline: 0;
+	@include transition(border linear 0.2s, box-shadow linear 0.2s);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	&:focus{
+		border: 1px solid #287ebb;
+		border-color: rgba(82, 168, 236, 0.8);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	}
+}
+
 // icons
 .icon{
 	vertical-align: middle;
@@ -112,6 +125,7 @@ html, body{
 	@extend %clr;
 	background: #fff;
 }
+
 	// logotype
 	.header__logo{
 		float: left;
@@ -158,20 +172,13 @@ html, body{
 			display: inline-block;
 			height: 20px;
 			line-height: 20px;
-			border: 1px solid #eee;
 			padding: 10px;
 			font-size: 15px;
 			width: 250px;
-			outline: 0;
 			margin-right: 10px;
-			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-			@include transition(border linear 0.2s, box-shadow linear 0.2s);
-			&:focus{
-				border: 1px solid #287ebb;
-				border-color: rgba(82, 168, 236, 0.8);
-				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-			}
 		}
+
+
 		// search btn
 		.btn-inverse{
 			display: inline-block;
@@ -435,7 +442,7 @@ html, body{
 	display: inline-block;
 	height: 30px;
 	line-height: 30px;
-	padding: 0 8px;
+	padding: 5px 8px;
 	font-size: 14px;
 	color: #7f8c8c;
 	@include border-radius(4px);
@@ -503,4 +510,168 @@ html, body{
 	&:hover{
 		text-decoration: none;
 	}
+}
+
+
+
+.alt{
+
+	.out{
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 0 -142px 140px;
+		z-index: 0;
+	}
+
+	// alt header
+	.header{
+		padding-top: 25px;
+		margin-left: -100px;
+		@extend %clr;
+		background: #fff;
+	}
+
+		// logotype
+		.header__logo{
+			float: left;
+			margin-right: 20px;
+			a{
+				display: block;
+				@extend %hide-text;
+				@include sized-sprite($icons, logo_work);
+			}
+		}
+	// alt footer
+	.footer{
+		//position: fixed;
+		position: relative;
+		height: 142px;
+		width: 260px;
+		color: #7f8c8d;
+		font-size: 13px;
+		margin-left: 100px;
+	}
+
+	.auth__title{
+		margin-bottom: 30px;
+		position: relative;
+		p{
+			font-size: 20px;
+			color: #666;
+		}
+	}
+		.title{
+			color: #2c3d51;
+			font-size: 36px;
+			display: inline-block;
+		}
+
+	.footer, .push {
+		height: 142px;
+	}
+
+
+	.form{
+		@include border-radius(4px);
+		background: #ecf0f1;
+		padding: 20px 0 0 0;
+		width: 427px;
+		input{
+			width: 98%;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 1%;
+		}
+		a{
+			font-size: 13px;
+			color: #2c3d51;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+		.form__wrap{
+			margin: 0 30px;
+		}
+		.form__line{
+			margin-bottom: 20px;
+		}
+		.form__label{
+			font-size: 14px;
+			color: #444;
+			display: inline-block;
+			margin-bottom: 0.2em;
+		}
+		.form__request{
+			text-align: center;
+		}
+
+		.formline__error{
+			.form__label{
+				font-size: 14px;
+				color: #ea4f2f;
+				display: inline-block;
+				margin-bottom: 0.2em;
+			}
+			input{
+				color: #ea4f2f;
+				outline: 0;
+				@include transition(border linear 0.2s, box-shadow linear 0.2s);
+				border: 1px solid #eee;
+				border-color: rgba(236, 82, 107, 0.8);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(236, 82, 107, 0.6);
+				&:focus{
+					box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+					border-color: 0;
+					border: 1px solid #eee;
+				}
+			}
+		}
+
+}
+
+
+.btn-warining{
+	@include border-radius(4px);
+	background: #e7c200;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	padding: 0 19px;
+	position: relative;
+	top: -20px;
+	left: 20px;
+	text-transform: uppercase;
+}
+
+.btn-success{
+	cursor: pointer;
+	border-radius: 0 0 4px 4px;
+	text-transform: uppercase;
+	color: #ebf0f1;
+	font-weight: bold;
+	background: #00be9a;
+	display: inline-block;
+	width: 100%;
+	border: none;
+	height: 60px;
+	line-height: 60px;
+}
+.btn-inactive{
+	border-radius: 0 0 4px 4px;
+	text-transform: uppercase;
+	color: #ebf0f1;
+	font-weight: bold;
+	background: #bdc3c7;
+	display: inline-block;
+	width: 100%;
+	border: none;
+	height: 60px;
+	line-height: 60px;
 }
