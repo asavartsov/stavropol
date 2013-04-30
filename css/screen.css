@@ -227,7 +227,9 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 
 .loginpopup { position: absolute; top: 30px; left: -88px; width: 242px; background: #fafafa; z-index: 1001; }
 .loginpopup:before { position: absolute; content: ""; top: -5px; left: 50%; margin-left: -5px; width: 0px; height: 0px; border-style: solid; border-width: 0 5px 5px 5px; border-color: transparent transparent #fafafa transparent; }
-.loginpopup .form { padding: 19px 0 0 0; width: 100%; }
+.loginpopup .title { text-align: center; font-size: 10px; font-weight: normal; text-transform: uppercase; color: #7f8c8d; line-height: 1; }
+.loginpopup .form { padding: 10px 0 0 0; width: 100%; }
+.loginpopup .form .title { margin-bottom: 5px; }
 .loginpopup .form input { font-size: 14px; width: 82%; padding: 0 7%; }
 .loginpopup .form a { font-size: 12px; color: #2c3d51 !important; text-transform: none; text-decoration: underline; }
 .loginpopup .form a:hover { text-decoration: none; }
@@ -237,7 +239,6 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .loginpopup .form .btn-success { height: 40px; line-height: 40px; }
 
 .loginpopup__socials { padding: 13px 0 8px 0; }
-.loginpopup__socials .title { text-align: center; font-size: 10px; font-weight: normal; text-transform: uppercase; color: #7f8c8d; line-height: 1; }
 .loginpopup__socials ul { text-align: center; }
 .loginpopup__socials li { float: none; display: inline-block; line-height: 1; margin-right: 6px; }
 

@@ -823,9 +823,20 @@ input{
 		border-width: 0 5px 5px 5px;
 		border-color: transparent transparent #fafafa transparent;
 	}
+	.title{
+		text-align: center;
+		font-size: 10px;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: #7f8c8d;
+		line-height: 1;
+	}
 	.form{
-		padding: 19px 0 0 0;
+		padding: 10px 0 0 0;
 		width: 100%;
+		.title{
+			margin-bottom: 5px;
+		}
 		input{
 			font-size: 14px;
 			width: 82%;
@@ -857,14 +868,6 @@ input{
 }
 	.loginpopup__socials{
 		padding: 13px 0 8px 0;
-		.title{
-			text-align: center;
-			font-size: 10px;
-			font-weight: normal;
-			text-transform: uppercase;
-			color: #7f8c8d;
-			line-height: 1;
-		}
 		ul{
 			text-align: center;
 		}
