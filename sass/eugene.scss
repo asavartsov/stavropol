@@ -1,0 +1,39 @@
+@import "lib/base";
+.sidebar {
+	@include transition(all 500ms linear);
+	.push {
+		height: 140px;
+	}
+	.catalog {
+		margin-bottom: -140px;
+		min-height: 100%;
+	}
+	.footer {
+		position: relative;
+	}
+}
+.sidebar.is-hidden {
+	left: -367px;
+}
+.sidebar-key {
+	position: absolute;
+	top: 50%;
+	right: -21px;
+	margin-top: -20px;
+	width: 22px;
+	height: 40px;
+	line-height: 40px;
+	background: #fcfcfc;
+	border: 0;
+	cursor: pointer;
+	@include border-radius(0 3px 3px 0);
+	i {
+		display: inline-block;
+		@include sized-sprite($icons, arr2);
+	}
+}
+.sidebar-key.is-active {
+	i {
+		@include sized-sprite($icons, arr1);
+	}
+}
