@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 //  --------------- Baron scroll ------------------ //
-    if ($(".baron__in").length > 0) {
+    if ($(".js-baron-list").length > 0) {
         baron({
             scroller: '.baron__in .baron__scroller',
             bar: '.baron__scrollerbar',
@@ -20,6 +20,25 @@ $(document).ready(function() {
             $(this).addClass("is-active");
             $(".sidebar").removeClass("is-hidden");
         }
+    });
+
+    function height() {
+        var height = $(window).height() - $(".topper").outerHeight() - $(".header").outerHeight();
+        $(".js-sidebar").height(height);
+        var height_list = height - $(".footer").outerHeight() - $(".catalog__title").outerHeight();
+        $(".js-baron-list").height(height_list);
+        if ($(".js-baron-list").length > 0) {
+            baron({
+                scroller: '.baron__in .baron__scroller',
+                bar: '.baron__scrollerbar',
+                barOnCls: 'baron',
+            });
+        }
+        else {}
+    }
+    height();
+    $(window).resize(function(){
+        height();
     });
 
 });

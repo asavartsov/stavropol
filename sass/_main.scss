@@ -300,124 +300,109 @@ input{
 
 
 
-// content
-.content{
 
+
+// start catalog here
+.catalog{
 }
-	// <aside>
-	.sidebar{
-		background: #fcfcfc;
-		width: 280px;
-		position: fixed;
-		top: 162px;
-		bottom: 0;
-		padding-left: 87px;
-	}
-		// start catalog here
-		.catalog{
-			height: 100%;
+.catalog__title{
+	padding-top: 12px;
+	margin-bottom: 17px;
+	font-size: 9px;
+	color: #7f8c8c;
+	text-transform: uppercase;
+	a{
+		color: #7f8c8c;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
 		}
-			.catalog__title{
-				margin-top: 12px;
-				margin-bottom: 17px;
-				font-size: 9px;
-				color: #7f8c8c;
-				text-transform: uppercase;
+	}
+}
+.catalog__list{
+	margin-right: 23px;
+	margin-left: 20px;
+	li{
+		position: relative;
+		list-style: none;
+		margin-bottom: 8px;
+		line-height: 1.2;
+		&:before{
+			@include sized-sprite($icons, ico_ellipse);
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: -17px;
+		}
+		a{
+			font-size: 15px;
+			color: #2c3a52;
+			text-decoration: none;
+			border-bottom: 1px dotted #2c3a52;
+			&:hover{
+				color: #2c3a52;
+				text-decoration: none;
+				border-bottom: 1px dotted transparent;
+			}
+		}
+		&.active{
+			position: relative;
+			&:before{
+				@include sized-sprite($icons, ico_ellipse_active);
+				content: "";
+				position: absolute;
+				top: 3px;
+				left: -17px;
+			}
+			a{
+				border-bottom: 1px dotted #e7c400;;
+				color: #e7c400;
+				text-decoration: none;
+				&:hover{
+					text-decoration: none;
+					color: #e7c400;
+					border-bottom: 1px dotted transparent;
+				}
+			}
+			li{
+				&:before{
+					content: none;
+				}
 				a{
-					color: #7f8c8c;
+					font-size: 14px;
+					color: #287ebb;
 					text-decoration: underline;
+					border-bottom: 1px dotted transparent;
+					&:hover{
+						color: #287ebb;
+						text-decoration: none;
+						border-bottom: 1px dotted transparent;
+					}
+				}
+			}
+		}
+		ul{
+			margin-left: 10px;
+			margin-top: 10px;
+			li{
+				margin-bottom: 10px;
+				a{
+					font-size: 14px;
+					color: #287ebb;
+					text-decoration: underline;
+					border-bottom: 1px dotted transparent;
 					&:hover{
 						text-decoration: none;
+						border-bottom: 1px dotted transparent;
 					}
 				}
 			}
-			.catalog__list{
-				margin-right: 23px;
-				margin-left: 20px;
-				li{
-					position: relative;
-					list-style: none;
-					margin-bottom: 8px;
-					line-height: 1.2;
-					&:before{
-						@include sized-sprite($icons, ico_ellipse);
-						content: "";
-						position: absolute;
-						top: 3px;
-						left: -17px;
-					}
-					a{
-						font-size: 15px;
-						color: #2c3a52;
-						text-decoration: none;
-						border-bottom: 1px dotted #2c3a52;
-						&:hover{
-							color: #2c3a52;
-							text-decoration: none;
-							border-bottom: 1px dotted transparent;
-						}
-					}
-					&.active{
-						position: relative;
-						&:before{
-							@include sized-sprite($icons, ico_ellipse_active);
-							content: "";
-							position: absolute;
-							top: 3px;
-							left: -17px;
-						}
-						a{
-							border-bottom: 1px dotted #e7c400;;
-							color: #e7c400;
-							text-decoration: none;
-							&:hover{
-								text-decoration: none;
-								color: #e7c400;
-								border-bottom: 1px dotted transparent;
-							}
-						}
-						li{
-							&:before{
-								content: none;
-							}
-							a{
-								font-size: 14px;
-								color: #287ebb;
-								text-decoration: underline;
-								border-bottom: 1px dotted transparent;
-								&:hover{
-									color: #287ebb;
-									text-decoration: none;
-									border-bottom: 1px dotted transparent;
-								}
-							}
-						}
-					}
-					ul{
-						margin-left: 10px;
-						margin-top: 10px;
-						li{
-							margin-bottom: 10px;
-							a{
-								font-size: 14px;
-								color: #287ebb;
-								text-decoration: underline;
-								border-bottom: 1px dotted transparent;
-								&:hover{
-									text-decoration: none;
-									border-bottom: 1px dotted transparent;
-								}
-							}
-						}
-					}
-				}
-			}
-
+		}
+	}
+}
 
 .footer{
-	position: fixed;
-	bottom: 0;
-	height: 140px;
+	height: 170px;
 	width: 260px;
 	color: #7f8c8d;
 	font-size: 13px;
