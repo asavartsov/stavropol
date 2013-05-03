@@ -3,23 +3,25 @@
 
 .baron__in {
 	display: inline-block;
-	vertical-align: top;
 	position: relative;
 	overflow: hidden;
-	height: 60%;
-	margin-left: -20px;
+	height: 100%;
 	text-align: left;
 }
 	.baron__scroller {
 		height: 100%;
 		overflow-y: scroll;
-			&::-webkit-scrollbar {
-				width: 0;
-			}
+		&::-webkit-scrollbar {
+			width: 0;
+		}
 	}
 	.baron{
 		.baron__scrollerbar {
 			display: block;
+			&:hover,
+			&:active {
+				background: #d6d6d6;
+			}
 		}
 	}
 		.baron__scrollerbar-wrapper {
@@ -48,4 +50,4 @@
 			&:hover{
 				opacity: .8;
 			}
-		}
+		}    
