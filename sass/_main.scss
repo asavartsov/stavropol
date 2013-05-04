@@ -21,6 +21,15 @@ html, body{
 	
 }
 
+
+//symbol
+.symbol{
+	font-family: 'Web Symbols';
+	text-rendering: optimizeLegibility;
+	font-weight: normal;
+	font-style: normal;
+}
+
 // input style
 input{
 	border: 1px solid #eee;
@@ -38,11 +47,13 @@ input{
 .icon{
 	vertical-align: middle;
 	display: inline-block;
+	font-weight: normal;
+	font-style: normal;
 }
-.icon-login{ @include sized-sprite($icons, ico_login); }
-.icon-search{ @include sized-sprite($icons, ico_search); }
-.icon-url{ @include sized-sprite($icons, ico_url); }
-.icon-location{ @include sized-sprite($icons, ico_location); }
+// .icon-login{ @include sized-sprite($icons, ico_login); }
+// .icon-search{ @include sized-sprite($icons, ico_search); }
+// .icon-url{ @include sized-sprite($icons, ico_url); }
+// .icon-location{ @include sized-sprite($icons, ico_location); }
 .icon-2gis{ @extend %hide-text; @include sized-sprite($icons, ico_2gis); }
 .icon-fb{ @include sized-sprite($icons, ico_fb); }
 .icon-tw{ @include sized-sprite($icons, ico_tw); }
@@ -98,6 +109,7 @@ input{
 	.icon-login{
 		margin-top: -4px;
 		margin-right: 2px;
+		// content: "&#0119;";
 	}
 	li{
 		list-style: none;
@@ -107,13 +119,11 @@ input{
 		&:first-child{
 			margin-left: 0;
 		}
-		&.is-active{
-			a{
-				color: #fff;
-				.icon-login{
-					@include sized-sprite($icons, ico_login_hover);
-				}
-			}
+		.is-active{
+			color: #fff;
+			// .icon-login{
+			// 	content: "&#0118;";
+			// }
 		}
 	}
 	a{
@@ -121,9 +131,9 @@ input{
 		text-decoration: none;
 		&:hover{
 			color: #fff;
-			.icon-login{
-				@include sized-sprite($icons, ico_login_hover);
-			}
+			// .icon-login{
+			// 	content: "&#0118;";
+			// }
 		}
 	}
 }
@@ -212,7 +222,7 @@ input{
 	.btn-inverse{
 		display: inline-block;
 		position: relative;
-		top: 2px;
+		top: 1px;
 		margin-bottom: 0;
 		margin-top: 2px;
 		text-align: center;
@@ -230,6 +240,7 @@ input{
 		.icon-search{
 			position: relative;
 			left: -5px;
+			top: -2px;
 		}
 	}
 }
@@ -248,21 +259,24 @@ input{
 			margin-left: 0;
 		}
 		a{
+			display: block;
+			line-height: 1;
 			color: #2c3b53;
 			text-decoration: none;
-			border-bottom: 1px dashed #2c3b53;
+			border-bottom: 1px dotted #2c3b53;
 			&:hover{
-				border-bottom: 1px dashed transparent;
+				border-bottom: 1px dotted #2c3b53;
 			}
 		}
 	}
 	.icon{
 		position: absolute;
-		top: 2px;
+		top: 0;
 		left: -15px;
 	}
 }
 .header__links-popup{
+	display: none;
 	position: absolute;
 	top: 25px;
 	left: -70px;
@@ -277,8 +291,8 @@ input{
 		padding: 3px 8px;
 	}
 	&.header__links-popup_mod{
-		top: 120px;
-		left: -120px;
+		top: 25px;
+		left: -33px;
 		padding: 10px 0;
 	}
 	.mark-ya{
@@ -360,16 +374,21 @@ input{
 		list-style: none;
 		padding-bottom: 8px;
 		line-height: 1.2;
-		a 	{
+		span{
+			position: relative;
+			top: 2px;
+		}
+		a {
+			line-height: 1.1;
 			position: relative;
 			font-size: 15px;
 			color: #2c3a52;
 			text-decoration: none;
 			border-bottom: 1px dotted #2c3a52;
 			&:hover{
-				color: #2c3a52;
+				color: red;
 				text-decoration: none;
-				border-bottom: 1px dotted transparent;
+				border-bottom: 1px dotted red;
 			}
 			&:before{
 				@include sized-sprite($icons, ico_ellipse);
@@ -388,8 +407,8 @@ input{
 			text-decoration: none;
 			&:hover{
 				text-decoration: none;
-				color: #e7c400;
-				border-bottom: 1px dotted transparent;
+				color: red;
+				border-bottom: 1px dotted red;
 			}
 			+ ul{
 				a{
@@ -398,8 +417,8 @@ input{
 					text-decoration: underline;
 					border-bottom: 1px dotted transparent;
 					&:hover{
-						color: #287ebb;
-						text-decoration: none;
+						color: red;
+						text-decoration: underline;
 						border-bottom: 1px dotted transparent;
 					}
 					&:before{
@@ -483,6 +502,9 @@ input{
 	line-height: 1;
 	font-size: 14px;
 	border-bottom: 1px dotted;
+	&:hover{
+		color: red;
+	}
 	@include unselectable();
 	i {
 		position: absolute;
@@ -548,15 +570,20 @@ input{
 		font-weight: normal;
 		line-height: 1.2;
 		margin-bottom: 5px;
+		span{
+			position: relative;
+			top: 2px;
+		}
 		a{
 			color: #2c3d51;
 			font-size: 14px;
 			font-weight: normal;
-			line-height: 1.2;
+			line-height: 1;
 			text-decoration: none;
 			border-bottom: 1px dotted;
 			&:hover{
-				border-bottom: 1px dotted transparent;
+				color: red;
+				border-bottom: 1px dotted red;
 			}
 		}
 	}
@@ -603,6 +630,9 @@ input{
 	.select {
 		display: inline-block;
 	}
+	i {
+		@include sized-sprite($icons, ico_ellipse);
+	}
 }  
 .radio__btn {
 	@include opacity(0);  
@@ -613,9 +643,7 @@ input{
 		}
 	}
 }
-i {
-	@include sized-sprite($icons, ico_ellipse);
-}
+
 .radio__text {
 	margin: 0 6px;
 	height: 22px;
@@ -719,13 +747,53 @@ i {
 	text-decoration: none;
 }
 
+
+.pin{
+	z-index: 2000;
+	display: inline-block;
+	text-decoration: none;
+	span{
+		position: relative;
+		padding: 7px 12px;
+		background: #277eba;
+		color: #fff;
+		cursor: pointer;
+		&:after{
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			margin-left: -5px;
+			content: "";
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 5px 5px 0 5px;
+			border-color: #277eba transparent transparent transparent;
+		}
+	}
+	&:hover{
+		text-decoration: none;
+	}
+	.pin__wrap{
+		position: relative;
+	}
+}
+
 .tooltip{
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	margin-left: -150px;
+	display: none;
 	z-index: 2000;
 	background: #fff;
 	padding: 20px;
 	width: 260px;
 	font-weight: normal;
 	@include border-radius(4px);
+	&.is-show{
+		display: block;
+	}
 	a{
 		color: #2876c0;
 		text-decoration: underline;
@@ -766,32 +834,7 @@ i {
 	margin-bottom: 10px;
 }
 
-.pin{
-	z-index: 2000;
-	display: inline-block;
-	color: #fff;
-	text-decoration: none;
-	span{
-		position: relative;
-		padding: 7px 12px;
-		background: #277eba;
-		&:after{
-			position: absolute;
-			bottom: -5px;
-			left: 50%;
-			margin-left: -5px;
-			content: "";
-			width: 0px;
-			height: 0px;
-			border-style: solid;
-			border-width: 5px 5px 0 5px;
-			border-color: #277eba transparent transparent transparent;
-		}
-	}
-	&:hover{
-		text-decoration: none;
-	}
-}
+
 
 
 
@@ -1072,6 +1115,7 @@ i {
 
 
 .loginpopup{
+	display: none;
 	position: absolute;
 	top: 30px;
 	left: -88px;

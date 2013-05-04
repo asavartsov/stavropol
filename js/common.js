@@ -29,6 +29,8 @@ $(document).ready(function() {
         }
     });
 
+
+
 // ---------------- Accordion -------------------- //
     $(".js-accord-body").hide();
     $(".js-accord").click(function(){
@@ -82,5 +84,54 @@ $(document).ready(function() {
     $(window).resize(function(){
         height();
     });
+
+// ---------- Show/hide login popup -------------------- //
+    $(".js-login").click(function(){
+        if ($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+            $(".loginpopup").hide();
+        }
+        else{
+            $(this).addClass("is-active");
+            $(".loginpopup").show();
+        }
+    });
+
+// ---------- Show/hide links popup-------------------- //
+    $(".js-links-popup").click(function(){
+        if ($(this).hasClass("is-active")){
+            $(this).removeClass("is-active");
+            $(".js-links").hide();
+        }
+        else{
+            $(this).addClass("is-active");
+            $(".js-links").show();
+        }
+    });
+
+// ---------- Show/hide maps popup-------------------- //
+    $(".js-maps-popup").click(function(){
+        if ($(this).hasClass("is-active")){
+            $(this).removeClass("is-active");
+            $(".js-maps").hide();
+        }
+        else{
+            $(this).addClass("is-active");
+            $(".js-maps").show();
+        }
+    });
+
+// ---------- Show/hide tooltip-------------------- //
+    $(".js-pin").click(function(){
+        if ($(this).hasClass("is-active")){
+            $(this).removeClass("is-active");
+            $(".tooltip").css("display", "none");
+        }
+        else{
+            $(this).addClass("is-active");
+            $(".tooltip").css("display", "block");
+        }
+    });
+
 
 });

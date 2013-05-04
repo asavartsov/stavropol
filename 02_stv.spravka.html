@@ -32,7 +32,7 @@
 		</nav>
 
 		<ul class="topper__profile">
-			<li class="is-active"><a href="#"><i class="icon icon-login"></i> Войти</a>
+			<li><a class="js-login" href="#"><i class="icon icon-login symbol">v</i> Войти</a>
 				<!-- BEGIN .loginpopup -->
 				<div class="loginpopup">
 					<div class="loginpopup__socials">
@@ -91,14 +91,14 @@
 				<input type="text" placeholder="Название, рубрика, телефон, сайт">
 				<strong>Где:</strong>
 				<input type="text" placeholder="Улица, Адрес">
-				<button type="submit" class="btn btn-inverse"><i class="icon icon-search"></i>Найти</button>
+				<button type="submit" class="btn btn-inverse"><i class="icon icon-search symbol">&#0035;</i>Найти</button>
 			</form>
 		</div>
 
 		<ul class="header__links">
-			<li><a href="#"><i class="icon icon-url"></i>Ссылка</a>
+			<li><a href="#" class="js-links-popup"><i class="icon symbol">&#0111;</i>Ссылка</a>
 				<!-- BEGIN .header__links-popup -->
-				<div class="header__links-popup">
+				<div class="header__links-popup js-links">
 					<div class="header__links-popup-wrap">
 						<span>Прямая ссылка на карту:</span>
 						<input type="text" readonly="readonly" value="maps.stv.ru/ly?qBd">
@@ -106,9 +106,9 @@
 				</div>
 				<!-- /.header__links-popup -->
 			</li>
-			<li><a href="#"><i class="icon icon-location"></i>Карта</a>
+			<li><a class=" js-maps-popup" href="#"><i class="icon symbol">&#0117;</i>Карта</a>
 				<!-- BEGIN .header__links-popup -->
-				<div class="header__links-popup header__links-popup_mod">
+				<div class="header__links-popup header__links-popup_mod  js-maps">
 					<div class="header__links-popup-wrap">
 						<ul>
 							<li><a href="#"><span class="mark-ya">Я</span>ндекс.Карты</a></li>
@@ -137,7 +137,10 @@
 						        <div class="container">
 									<!-- BEGIN .catalog__list -->
 									<ul class="catalog__list">
-										<li><a href="#" class="js-accord">Аварийные / Справочные / Экстренные службы</a>
+										<li>
+											<a href="#" class="js-accord">
+												<span>Аварийные / Справочные / Экстренные службы</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -153,7 +156,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Автосервис / Автотовары</a>
+											<a href="#" class="js-accord">
+												<span>Автосервис / Автотовары</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -169,7 +174,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Город / Власть</a>
+											<a href="#" class="js-accord">
+												<span>Город / Власть</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -185,7 +192,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Досуг / Развлечения / Общественное</a>
+											<a href="#" class="js-accord">
+												<span>Досуг / Развлечения / Общественное</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -201,7 +210,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Интернет / Связь / Информационные технологии</a>
+											<a href="#" class="js-accord">
+												<span>Интернет / Связь / Информационные технологии</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -217,7 +228,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Коммунальные / Бытовые / Ритуальные услуги</a>
+											<a href="#" class="js-accord">
+												<span>Коммунальные / Бытовые / Ритуальные услуги</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -233,7 +246,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Компьютеры / Бытовая техника / Офисная техника</a>
+											<a href="#" class="js-accord">
+												<span>Компьютеры / Бытовая техника / Офисная техника</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -249,7 +264,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Культура / Искусство / Религия</a>
+											<a href="#" class="js-accord">
+												<span>Культура / Искусство / Религия</span>
+											</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -265,7 +282,9 @@
 											</ul>
 										</li>
 										<li>
-											<a href="#" class="js-accord">Мебель / Фурнитура / Материалы</a>
+											<a href="#" class="js-accord">
+												<span>Мебель / Фурнитура / Материалы</span>
+										</a>
 											<ul class="js-accord-body">
 												<li><a href="#">Управление ГО и ЧС</a></li>
 												<li><a href="#">Скорая медицинская помощь</a></li>
@@ -305,29 +324,31 @@
 		<!-- /.sidebar -->
 	</div>
 	<!-- /.content -->
-<!-- BEGIN .tooltip -->
-<div class="tooltip" style="position:fixed; top:280px; left: 50%;">
-	<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
-	<div class="tooltip__tags"><a href="#">Автозапчасти для иномарок</a>, <a href="#">Автоаксессуары</a>, <a href="#">Автохимия</a>, <a href="#">Автостекло</a>, <a href="#">Интернет-магазины</a></div>
-	<div class="tooltip__info">
-		<p><a href="#">Ипподромская, 44</a></p>
-		<p><strong>+7 (383) 284-19-94</strong></p>
-		<p><strong>+7 (383) 287-50-42</strong></p>
-		<p>Пн—Вс: 9...20 часов (без обеда)</p>
-	</div>
-	<div class="tooltip__info">
-		<p><a href="#">partclub.ru</a></p>
-		<p><a href="#">info@partclub.ru</a></p>
-	</div>
-	<p><a href="#">Карточка организации</a></p>
-</div>
-<!-- /.tooltip -->
+
 
 <!-- BEGIN .pin -->
-<a href="#" class="pin" style="position:fixed; top:300px; left:850px;"><span>5</span></a>
-<a href="#" class="pin" style="position:fixed; top:400px; left:880px;"><span>4</span></a>
-<div class="pin" style="position:fixed; top:300px; left:1400px;"><span>3</span></div>
-<div class="pin" style="position:fixed; top:370px; left:1350px;"><span>2</span></div>
+<div class="pin js-pin" style="position:fixed; top:450px; left:800px;">
+	<div class="pin__wrap">
+		<span>1</span>
+		<!-- BEGIN .tooltip -->
+		<div class="tooltip">
+			<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
+			<div class="tooltip__tags"><a href="#">Автозапчасти для иномарок</a>, <a href="#">Автоаксессуары</a>, <a href="#">Автохимия</a>, <a href="#">Автостекло</a>, <a href="#">Интернет-магазины</a></div>
+			<div class="tooltip__info">
+				<p><a href="#">Ипподромская, 44</a></p>
+				<p><strong>+7 (383) 284-19-94</strong></p>
+				<p><strong>+7 (383) 287-50-42</strong></p>
+				<p>Пн—Вс: 9...20 часов (без обеда)</p>
+			</div>
+			<div class="tooltip__info">
+				<p><a href="#">partclub.ru</a></p>
+				<p><a href="#">info@partclub.ru</a></p>
+			</div>
+			<p><a href="#">Карточка организации</a></p>
+		</div>
+		<!-- /.tooltip -->
+	</div>
+</div>
 <!-- /.pin -->
 
 <!-- BEGIN #Yandex-Map -->
