@@ -28,6 +28,7 @@ html, body{
 	text-rendering: optimizeLegibility;
 	font-weight: normal;
 	font-style: normal;
+	text-transform: none !important;
 }
 
 // input style
@@ -55,10 +56,18 @@ input{
 // .icon-url{ @include sized-sprite($icons, ico_url); }
 // .icon-location{ @include sized-sprite($icons, ico_location); }
 .icon-2gis{ @extend %hide-text; @include sized-sprite($icons, ico_2gis); }
-.icon-fb{ @include sized-sprite($icons, ico_fb); }
-.icon-tw{ @include sized-sprite($icons, ico_tw); }
-.icon-vk{ @include sized-sprite($icons, ico_vk); }
-.icon-od{ @include sized-sprite($icons, ico_od); }
+.icon-fb{
+	color: #4a63ad;
+}
+.icon-tw{
+	color: #29a9e4;
+}
+.icon-vk{
+	color: #2a466d;
+}
+.icon-od{
+	color: #e58018;
+}
 
 // wrapper block for navigation & authorization
 .topper{
@@ -107,9 +116,8 @@ input{
 	float: right;
 	text-transform: uppercase;
 	.icon-login{
-		margin-top: -4px;
+		margin-top: -7px;
 		margin-right: 2px;
-		// content: "&#0119;";
 	}
 	li{
 		list-style: none;
@@ -121,9 +129,6 @@ input{
 		}
 		.is-active{
 			color: #fff;
-			// .icon-login{
-			// 	content: "&#0118;";
-			// }
 		}
 	}
 	a{
@@ -273,6 +278,9 @@ input{
 		position: absolute;
 		top: 0;
 		left: -15px;
+		&.icon-pin{
+			margin-left: 3px;
+		}
 	}
 }
 .header__links-popup{
@@ -457,19 +465,20 @@ input{
 	width: 22px;
 	height: 40px;
 	line-height: 40px;
+	font-size: 14px;
 	background: #fcfcfc;
 	border: 0;
 	cursor: pointer;
 	@include border-radius(0 3px 3px 0);
 	i {
 		display: inline-block;
-		@include sized-sprite($icons, arr2);
+		// @include sized-sprite($icons, arr2);
 	}
 }
 .sidebar-key.is-active {
-	i {
-		@include sized-sprite($icons, arr1);
-	}
+	// i {
+	// 	@include sized-sprite($icons, arr1);
+	// }
 }
 .search {
 	li {
@@ -509,14 +518,13 @@ input{
 	i {
 		position: absolute;
 		left: -14px;
-		top: 5px;
-		@include sized-sprite($icons, arr3);
+		top: -2px;
 	}
 }
 .accordion__title.is-active {
-	i {
-		@include sized-sprite($icons, arr4);
-	}
+	// i {
+	// 	@include sized-sprite($icons, arr4);
+	// }
 }
 .accordion__body{
 	display: none;
@@ -898,11 +906,10 @@ input{
 		padding: 24px 0 0 0;
 		width: 487px;
 		input{
-			width: 96%;
-			height: 40px;
-			line-height: 40px;
+			width: 96%; 
+			line-height: 17px;
 			font-size: 17px;
-			padding: 0 1%;
+			padding: 9px 1%;
 			&.form__login{
 				width: 60%;
 				color: #94a5a5;
@@ -946,19 +953,27 @@ input{
 		line-height: 1.2;
 		margin-top: 5px;
 	}
-	.formline__success{
-		.form__controls{
-			position: relative;
-			&:after{
-				@include sized-sprite($icons, ico_success);
-				content: "";
-				position: absolute;
-				top: 50%;
-				right: -17px;
-				margin-top: -4px;
-			}
+	.form__btn{
+		.btn{
+			font-size: 14px;
 		}
 	}
+	.form__controls{
+		position: relative;
+		.icon{
+			position: absolute;
+			top: 8px;
+			right: -20px;
+			font-size: 17px;
+		}
+			.icon-error{
+				color: #e84d38;
+			}
+			.icon-success{
+				color: #00be99;
+			}
+	}
+
 	.formline__error{
 		.form__label{
 			font-size: 14px;
@@ -979,32 +994,22 @@ input{
 				border: 1px solid #eee;
 			}
 		}
-		.form__controls{
-			position: relative;
-			&:after{
-				@include sized-sprite($icons, ico_error);
-				content: "";
+
+			.form__errorinfo{
 				position: absolute;
-				top: 50%;
-				right: -17px;
-				margin-top: -4px;
-			}
-		}
-		.form__errorifno{
-			position: absolute;
-			width: 140px;
-			top: 5px;
-			right: -185px;
-			font-size: 12px;
-			color: #ea4f2f;
-			a{
-				font-size: 13px;
+				width: 140px;
+				top: 0;
+				right: -185px;
+				font-size: 12px;
 				color: #ea4f2f;
-				text-decoration: underline;
-				&:hover{
-					text-decoration: none;
+				a{
+					font-size: 13px;
+					color: #ea4f2f;
+					text-decoration: underline;
+					&:hover{
+						text-decoration: none;
+					}
 				}
-			}
 		}
 	}
 	.sidebar{
@@ -1089,6 +1094,8 @@ input{
 	}
 	.icon{
 		margin-right: 6px;
+		margin-top: -6px;
+		font-size: 20px;
 	}
 	.socials__fb{
 		a{
@@ -1122,6 +1129,7 @@ input{
 	width: 242px;
 	background: #fafafa;
 	z-index: 1001;
+	border-radius: 0 0 20px 20px;
 	&:before{
 		position: absolute;
 		content: "";
@@ -1145,15 +1153,16 @@ input{
 	.form{
 		padding: 10px 0 0 0;
 		width: 100%;
+		background: #ecf0f1;
+		border-radius: 0 0 5px 5px;
 		.title{
 			margin-bottom: 5px;
 		}
 		input{
 			font-size: 14px;
 			width: 82%;
-			padding: 0 7%;
-			height: 40px;
-			line-height: 40px;
+			padding: 11px 7%;
+			line-height: 17px;
 		}
 		a{
 			font-size: 12px;
@@ -1178,6 +1187,9 @@ input{
 			height: 40px;
 			line-height: 40px;
 		}
+		.btn{
+			border-radius: 0 0 5px 5px;
+		}
 	}
 }
 	.loginpopup__socials{
@@ -1190,5 +1202,12 @@ input{
 			display: inline-block;
 			line-height: 1;
 			margin-right: 6px;
+		}
+		.icon{
+			font-size: 20px;
+		}
+		a{
+			&:hover{
+				color: black;			}
 		}
 	}
