@@ -689,7 +689,7 @@ input{
 	.is-active {
 		@include border-radius(2px 2px 0 0);
 		i {
-			@include sized-sprite($icons, arr6);
+			// @include sized-sprite($icons, arr6);
 		}
 	}
 }
@@ -709,11 +709,12 @@ input{
 	}
 	i {
 		position: relative;
-		top: 0;
+		top: -6px;
 		display: inline-block;
 		margin: 0 5px;
 		vertical-align: middle;
-		@include sized-sprite($icons, arr5);
+		color: #fff;
+		background: none;
 	}
 }
 .footer{
