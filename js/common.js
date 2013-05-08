@@ -1,137 +1,114 @@
 $(document).ready(function() {
 
-//  --------------- Baron scroll ------------------ //
-    function baron_js() {
-        if ($(".js-baron-list").length > 0) {
-            baron({
-                scroller: '.baron__in .baron__scroller',
-                bar: '.baron__scrollerbar',
-                barOnCls: 'baron',
-            });
-        }
-        else {}
-    }
-    baron_js();
+	// ---------- jScrollPane -------------------- //
+		$('.scroll-pane').jScrollPane({
+			autoReinitialise: true,
+			verticalDragMaxHeight: 80,
+			mouseWheelSpeed: 10,
+			verticalGutter: 0,
+		});
 
-// ---------- Show/hide sidebar -------------------- //
-    $(".js-sidebar-key").click(function(){
-        if ($(this).hasClass("is-active")) {
-            $(this).removeClass("is-active");
-            $(".sidebar").animate({
-                left: -367
-            }, 200);
-        }  
-        else{
-            $(this).addClass("is-active");
-            $(".sidebar").animate({
-                left: 0
-            }, 200);
-        }
-    });
+	// ---------------- Sidebar/jScrollPane height -------------------- //
+	    function sidebar_height() {
+	    	var height_head = $(".header").height();
+	        var height = $(window).height() - height_head;
+	        $(".js-sidebar").height(height);
+	        $(".scroll-pane").height(height-30);
+	    }
+	    sidebar_height();
 
+		$(window).resize(function(){
+			sidebar_height();
+			scroll_api.reinitialise();
+		});
 
+	// ---------- Show/hide sidebar -------------------- //
+		$(".js-sidebar-key").click(function(){
+			if ($(this).hasClass("is-active")) {
+				$(this).removeClass("is-active");
+				$(".sidebar").animate({
+					left: -367
+				}, 200);
+				$(".js-icon").html("&#215;");
+			}
+			else{
+				$(this).addClass("is-active");
+				$(".sidebar").animate({
+					left: 0
+				}, 200);
+				$(".js-icon").html("&#212;");
+			}
+		});
 
-// ---------------- Accordion -------------------- //
-    $(".js-accord-body").hide();
-    $(".js-accord").click(function(){
-        if ($(this).hasClass("is-active")) {
-            $(this).removeClass("is-active");
-            $(this).next().slideUp("fast");
-        }  
-        else{
-            $(".js-accord-body").slideUp("fast");
-            $(".js-accord").removeClass("is-active");
-            $(this).addClass("is-active");
-            $(this).next().slideDown("fast");
-        }
-        baron_js();
-    });
+	// ---------------- Accordion -------------------- //
+	    $(".js-accord-body").hide();
+	    $(".js-accord").click(function(){
+	        if ($(this).hasClass("is-active")) {
+	            $(this).removeClass("is-active");
+	            $(this).next().slideUp("fast");
+	        }
+	        else{
+	            $(".js-accord-body").slideUp("fast");
+	            $(".js-accord").removeClass("is-active");
+	            $(this).addClass("is-active");
+	            $(this).next().slideDown("fast");
+	        }
+	    });
 
-// ---------------- Select list -------------------- //
-    function select_list() {
-        $(".js-select-list").hide();
-        $(".js-select").click(function(){
-            if ($(this).hasClass("is-active")) {
-                $(this).removeClass("is-active");
-                $(this).next().slideUp("fast");
-            }  
-            else{
-                $(this).addClass("is-active");
-                $(this).next().slideDown("fast");
-            }
-        });
-        $(".js-select-list li").click(function(){
-            var select = $(this).parent().parent().find(".js-select");
-            var text = $(this).text();
-            select.find("span").text(text);
-            select.removeClass("is-active");
-            $(this).parent().slideUp("fast");
+	// ---------------- Select list -------------------- //
+	    function select_list() {
+	        $(".js-select-list").hide();
+	        $(".js-select").click(function(){
+	            if ($(this).hasClass("is-active")) {
+	                $(this).removeClass("is-active");
+	                $(this).next().slideUp("fast");
+	            }
+	            else{
+	                $(this).addClass("is-active");
+	                $(this).next().slideDown("fast");
+	            }
+	        });
+	        $(".js-select-list li").click(function(){
+	            var select = $(this).parent().parent().find(".js-select");
+	            var text = $(this).text();
+	            select.find("span").text(text);
+	            select.removeClass("is-active");
+	            $(this).parent().slideUp("fast");
 
-        });
-    }
-    select_list();
+	        });
+	    }
+	    select_list();
 
-// ---------------- Sidebar height -------------------- //
-    function height() {
-        var height = $(window).height() - $(".topper").outerHeight() - $(".header").outerHeight();
-        $(".js-sidebar").height(height);
-        var height_list = height - $(".footer").outerHeight() - $(".catalog__title").outerHeight();
-        $(".js-baron-list").height(height_list);
-        baron_js();
-    }
-    height();
+	// ---------------- POPUP .login-popup -------------------- //
+	    $('.js-login').click(function() {
+	     if ($(this).hasClass('is-active')) {
+	      $(this).removeClass('is-active');
+	      $('.login-popup').fadeOut();
+	     }
+	     else {
+	      $(this).addClass('is-active');
+	      $('.login-popup').fadeIn();
+	     }
+	    });
 
-    $(window).resize(function(){
-        height();
-    });
+	// ---------------- POPUP .js-links -------------------- //
+	    $('.js-links').click(function() {
+	     if ($(this).hasClass('is-open')) {
+	      $(".js-links").removeClass('is-open');
+	      $(".js-popups").fadeOut();
+	     }
+	     else {
+	      $(".js-links").removeClass('is-open');
+	      $(this).addClass('is-open');
+	      $(".js-popups").fadeOut();
+	      $(this).next().fadeIn();
+	     }
+	    });
 
-// ---------- Show/hide login popup -------------------- //
-    $(".js-login").click(function(){
-        if ($(this).hasClass("is-active")) {
-            $(this).removeClass("is-active");
-            $(".loginpopup").hide();
-        }
-        else{
-            $(this).addClass("is-active");
-            $(".loginpopup").show();
-        }
-    });
-
-// ---------- Show/hide links popup-------------------- //
-    $(".js-links-popup").click(function(){
-        if ($(this).hasClass("is-active")){
-            $(this).removeClass("is-active");
-            $(".js-links").hide();
-        }
-        else{
-            $(this).addClass("is-active");
-            $(".js-links").show();
-        }
-    });
-
-// ---------- Show/hide maps popup-------------------- //
-    $(".js-maps-popup").click(function(){
-        if ($(this).hasClass("is-active")){
-            $(this).removeClass("is-active");
-            $(".js-maps").hide();
-        }
-        else{
-            $(this).addClass("is-active");
-            $(".js-maps").show();
-        }
-    });
-
-// ---------- Show/hide tooltip-------------------- //
-    $(".js-pin").click(function(){
-        if ($(this).hasClass("is-active")){
-            $(this).removeClass("is-active");
-            $(".tooltip").css("display", "none");
-        }
-        else{
-            $(this).addClass("is-active");
-            $(".tooltip").css("display", "block");
-        }
-    });
+	// ---------------- POPUP .js-links input select -------------------- //
+		$(".js-input").click(function() {
+			$(this).select();
+		});
 
 
 });

@@ -1,15 +1,21 @@
 @import "common";
-@import "fonts";
-@import "layouts";
 @import "main";
-@import "baron";
 
-// this is just example of  how commenting css should be done in big projects
-// @import "styledocco";
+@import "fonts";
 
-// div{
-// 	background: red;
-// 	@include iphone{
-// 		background: blue;
-// 	}
-// }
+@import "header";
+@import "footer";
+
+@import "sidebar";
+@import "jsp";
+
+@import "popups";
+
+
+
+
+
+
+
+// this is just example of page layout
+@import "layouts";

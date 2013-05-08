@@ -107,12 +107,6 @@ $break-large: 1180px;
 		@content;
 	}
 }
-// box-sizing
-@mixin box-sizing($var) {
-     -moz-box-sizing: $var;
-  -webkit-box-sizing: $var;
-          box-sizing: $var;
-}
 // sized sprites
 @mixin image-size($path){
 	width: image-width($path);

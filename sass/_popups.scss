@@ -1,0 +1,262 @@
+@import "lib/base";
+
+//pin
+.pin{
+	z-index: 1000;
+	display: inline-block;
+	text-decoration: none;
+	span{
+		position: relative;
+		padding: 7px 12px;
+		background: #277eba;
+		color: #fff;
+		cursor: pointer;
+		&:after{
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			margin-left: -5px;
+			content: "";
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 5px 5px 0 5px;
+			border-color: #277eba transparent transparent transparent;
+		}
+	}
+}
+
+//tooltip
+.tooltip{
+	position: absolute;
+	z-index: 1000;
+	bottom: -100px;
+	left: 50%;
+	margin-left: 100px;
+	background: #fff;
+	padding: 20px;
+	width: 260px;
+	font-weight: normal;
+	border-radius: 4px;
+	&:after{
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		margin-left: -5px;
+		content: "";
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 5px 5px 0 5px;
+		border-color: #fff transparent transparent transparent;
+	}
+	div{
+		margin-bottom: 10px;
+	}
+	a{
+		color: #2876c0;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	.tooltip__title{
+		color: #2c3c52;
+		font-size: 18px;
+		line-height: 1.2;
+		a{
+			color: #2c3c52;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.tooltip__tags{
+		li{
+			display: inline-block;
+			list-style: none;
+		}
+		a{
+			color: #7f8c8c;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+//loginpopup
+.login-popup{
+	display: none;
+	position: absolute;
+	z-index: 1001;
+	top: 30px;
+	left: -88px;
+	width: 242px;
+	background: #fafafa;
+	border-radius: 0 0 20px 20px;
+	&:before{
+		position: absolute;
+		content: "";
+		top: -5px;
+		left: 50%;
+		margin-left: -5px;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 0 5px 5px 5px;
+		border-color: transparent transparent #fafafa transparent;
+	}
+	.login-popup__heading{
+		text-align: center;
+		font-size: 10px;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: #7f8c8d;
+		line-height: 1;
+	}
+	.login-popup__socials{
+		padding: 13px 0 8px 0;
+		ul{
+			text-align: center;
+		}
+		li{
+			float: none;
+			display: inline-block;
+			line-height: 1;
+			margin-right: 6px;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+		.icon{
+			@include transition(all linear 0.2s);
+			&:hover{
+				color: #7f8c8d;
+			}
+		}
+		.icon{
+			font-size: 20px;
+		}
+	}
+	.login-popup__form{
+		padding: 10px 0 0 0;
+		width: 100%;
+		background: #ecf0f1;
+		border-radius: 0 0 5px 5px;
+		.login-popup__inner{
+			margin: 0 18px;
+		}
+		.login-popup__heading{
+			margin-bottom: 5px;
+		}
+		input{
+			font-size: 14px;
+			width: 82%;
+			padding: 11px 7%;
+			line-height: 17px;
+		}
+		a{
+			font-size: 12px;
+			color: #2c3d51 !important;
+			text-transform: none;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		div{
+			margin-bottom: 8px;
+		}
+		.request{
+			margin-top: -2px;
+			text-align: center;
+		}
+	}
+	.btn{
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0 0 5px 5px;
+	}
+}
+
+//links-popup
+.links-popup{
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: -70px;
+	color: #fff;
+	background: #2c3c52;
+	border-radius: 4px;
+	padding: 10px;
+	input{
+		margin-top: 5px;
+		outline: 0;
+		border: 0;
+		padding: 3px 8px;
+	}
+}
+	.links-popup__wrap{
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: -15px;
+			left: 50%;
+			margin-left: -5px;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 0 5.5px 5px 5.5px;
+			border-color: transparent transparent #2c3b53 transparent;
+		}
+	}
+
+//maps-popup
+.maps-popup{
+	display: none;
+	position: absolute;
+	top: 25px;
+	left: -33px;
+	padding: 10px 0;
+	color: #fff;
+	background: #2c3c52;
+	border-radius: 4px;
+	.mark-ya {color: #d92332;}
+	.mark-2gis {color: #9fc419;}
+	li{
+		margin: 0;
+		list-style: none;
+		float: none;
+		color: #fff;
+		text-align: center;
+		&:first-child{
+			padding-bottom: 5px;
+			margin-bottom: 5px;
+			border-bottom: 1px solid #425064;
+			margin-left: 0;
+		}
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+		padding: 0 10px;
+	}
+	.maps-popup__wrap{
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: -15px;
+			left: 50%;
+			margin-left: -5px;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 0 5.5px 5px 5.5px;
+			border-color: transparent transparent #2c3b53 transparent;
+		}
+	}
+}

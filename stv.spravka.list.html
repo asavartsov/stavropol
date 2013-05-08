@@ -1,0 +1,370 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/common.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+</head>
+<body>
+<!-- BEGIN .out -->
+<div class="out">
+	<!-- BEGIN .header -->
+	<div class="header">
+		<!-- BEGIN .header__topper -->
+		<div class="header__topper">
+			<!-- BEGIN .header__nav -->
+			<div class="header__nav">
+				<ul>
+					<li><a href="#">События</a></li>
+					<li><a href="#">Работа</a></li>
+					<li><a href="#">Недвижимость</a></li>
+					<li><a href="#">Автомобили</a></li>
+					<li><a href="#">Объявления</a></li>
+					<li class="active"><a href="#">Справочник</a></li>
+					<li><a href="#">Почта</a></li>
+					<li><a href="#">Городской форум</a></li>
+				</ul>
+			</div>
+			<!-- /.header__nav -->
+			<!-- BEGIN .header__profile -->
+			<div class="header__profile">
+				<ul>
+					<li>
+						<a href="#" class="js-login"><i class="symbol icon icon-login">&#0119;</i>Войти</a>
+						<!-- BEGIN .login-popup -->
+						<div class="login-popup">
+							<div class="login-popup__socials">
+								<h1 class="login-popup__heading">через соцсети</h1>
+								<ul>
+									<li><a href="#" title="Facebook"><i class="symbol icon icon-fb">&#228;</i></a></li>
+									<li><a href="#" title="Twitter"><i class="symbol icon icon-tw">&#229;</i></a></li>
+									<li><a href="#" title="Вконтакте"><i class="symbol icon icon-vk">&#230;</i></a></li>
+									<li><a href="#" title="Одноклассники"><i class="symbol icon icon-od">&#233;</i></a></li>
+								</ul>
+							</div>
+							<form class="login-popup__form">
+								<div class="login-popup__inner">
+									<h1 class="login-popup__heading">или используй:</h1>
+									<div>
+										<input type="text" placeholder="Логин">
+									</div>
+									<div>
+										<input type="password" placeholder="Пароль">
+									</div>
+									<div class="request">
+										<a href="#">Я забыл пароль</a>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-success" disabled="">Войти</button>
+							</form>
+						</div>
+						<!-- /.login-popup -->
+					</li>
+					<li>
+						<a href="#">Зарегистрироваться</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.header__profile -->
+		</div>
+		<!-- /.header__topper -->
+		<!-- BEGIN .header__content -->
+		<div class="header__content">
+			<!-- BEGIN .logo -->
+			<h1 class="logo">
+				<a href="#" title="STV .Справочник Ставрополь">
+					<div class="logo__name">stv</div>
+					<div class="logo__category">.справочник</div>
+					<div class="logo__city">Ставрополь</div>
+				</a>
+			</h1>
+			<!-- /.logo -->
+			<!-- BEGIN .header__search -->
+			<div class="header__search">
+				<form>
+					<strong>Что:</strong>
+					<input type="text" placeholder="Название, рубрика, телефон, сайт">
+					<strong>Где:</strong>
+					<input type="text" placeholder="Улица, Адрес">
+					<button type="submit" class="btn btn-inverse">
+						<i class="symbol icon icon-search">&#0035;</i>Найти
+					</button>
+				</form>
+			</div>
+			<!-- /.header__search -->
+			<!-- BEGIN .header__links -->
+			<div class="header__links">
+				<ul>
+					<li>
+						<a class="js-links" href="#"><i class="symbol icon icon-links">&#0111;</i>Ссылка</a>
+						<!-- BEGIN .linkspopup -->
+						<div class="js-popups links-popup">
+							<div class="links-popup__wrap">
+								<span>Прямая ссылка на карту:</span>
+								<input class="js-input" type="text" readonly="readonly" value="maps.stv.ru/ly?qBd">
+							</div>
+						</div>
+						<!-- /.linkspopup -->
+					</li>
+					<li>
+						<a class="js-links" href="#"><i class="symbol icon icon-pin">&#0117;</i>Карта</a>
+						<!-- BEGIN .maps-popup -->
+						<div class="js-popups maps-popup">
+							<div class="maps-popup__wrap">
+								<ul>
+									<li>
+										<a href="#"><span class="mark-ya">Я</span>ндекс.Карты</a>
+									</li>
+									<li>
+										<a href="#"><span class="mark-2gis">2GIS</span>.Карты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /.maps-popup -->
+					</li>
+				</ul>
+			</div>
+			<!-- /.header__links -->
+		</div>
+		<!-- /.header__content -->
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .content -->
+	<div class="content">
+		<!-- BEGIN .sidebar -->
+		<div class="sidebar js-sidebar">
+				<button class="sidebar-key js-sidebar-key is-active"><i class="symbol js-icon icon">&#212;</i></button>
+			<div class="sidebar__wrap">
+				<!-- BEGIN .scroll-pane -->
+				<div class="scroll-pane">
+					<div class="sidebar__content">
+						<!-- BEGIN .search -->
+						<div class="search">
+							<a class="catalog-link" href="#">Каталог организаций города</a>
+							<span class="sticker sticker_yellow">Автоаксессуары: 590 организаций</span>
+							<!-- BEGIN .accordion -->
+							<div class="accordion">
+								<span class="accordion__title js-accord">
+									<i class="symbol icon">&#203;</i>Уточнить параметры поиск
+								</span>
+								<div class="accordion__body js-accord-body">
+									<ul>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name1">
+													<i></i>
+													Работает сейчас
+													<span>21:06</span>
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name1">
+													<i></i>
+													Работает круглосуточно
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name1">
+													<i></i>
+													Работает
+												</label>
+												<input class="radio__text" type="text" value="21:06">
+												<div class="select">
+													<div class="select__text js-select">
+														<span>пн</span>
+														<i class="symbol icon">&#203;</i>
+													</div>
+													<ul class="js-select-list">
+														<li>Пн</li>
+														<li>Вт</li>
+														<li>Ср</li>
+														<li>Чт</li>
+														<li>Пт</li>
+														<li>Сб</li>
+														<li>Вс</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<ul>
+										<h1 class="h1">Сортировать по:</h1>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name2">
+													<i></i>
+													лучшему совпадению
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name2">
+													<i></i>
+													алфавиту
+												</label>
+											</div>
+										</li>
+										<li>
+											<div class="radio">
+												<label>
+													<input class="radio__btn" type="radio" name="name2">
+													<i></i>
+													рейтингу
+												</label>
+											</div>
+										</li>
+									</ul>
+									<a href="#" class="btn btn-success">Показать</a>
+								</div>
+
+							</div>
+							<!-- /.accordion -->
+							<!-- BEGIN .search__result -->
+							<div class="search__result">
+								<ol>
+									<li>
+										<div class="search__item">
+											<h1 class="search__title"><a href="#"><span>Партклуб, интернет-магазин автотоваров для иномарок</span></a></h1>
+											<p class="search__description">Магазин автозапчастей для иномарок. Оригинальные запчасти и замены.</p>
+											<div class="search__info">
+												<div>
+													<p><a href="#">Ипподромская, 44</a></p>
+													<p><strong>+7 (383) 284-19-94</strong></p>
+													<p><strong>+7 (383) 287-50-42</strong></p>
+													<p>Пн—Вс: 9...20 часов (без обеда)</p>
+												</div>
+												<div>
+													<p><a href="#">partclub.ru</a></p>
+													<p><a href="#">info@partclub.ru</a></p>
+												</div>
+											</div>
+											<div class="search__tags">
+												<ul>
+													<li><a href="#">Автозапчасти для иномарок</a>,</li>
+													<li><a href="#">Автоаксессуары</a>,</li>
+													<li><a href="#">Автохимия</a>,</li>
+													<li><a href="#">Автостекло</a>,</li>
+													<li><a href="#">Интернет-магазины</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="search__item">
+											<h1 class="search__title"><a href="#"><span>Партклуб, интернет-магазин автотоваров для иномарок</span></a></h1>
+											<p class="search__description">Магазин автозапчастей для иномарок. Оригинальные запчасти и замены.</p>
+											<div class="search__info">
+												<div>
+													<p><a href="#">Ипподромская, 44</a></p>
+													<p><strong>+7 (383) 284-19-94</strong></p>
+													<p><strong>+7 (383) 287-50-42</strong></p>
+													<p>Пн—Вс: 9...20 часов (без обеда)</p>
+												</div>
+												<div>
+													<p><a href="#">partclub.ru</a></p>
+													<p><a href="#">info@partclub.ru</a></p>
+												</div>
+											</div>
+											<div class="search__tags">
+												<ul>
+													<li><a href="#">Автозапчасти для иномарок</a>,</li>
+													<li><a href="#">Автоаксессуары</a>,</li>
+													<li><a href="#">Автохимия</a>,</li>
+													<li><a href="#">Автостекло</a>,</li>
+													<li><a href="#">Интернет-магазины</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ol>
+							</div>
+							<!-- /.search__result -->
+						</div>
+						<!-- /.search -->
+						<!-- BEGIN .footer -->
+						<div class="footer">
+							<p>Информация предоставлена <a href="#" title="2GIS"><i class="icon icon-2gis">2GIS</i></a></p>
+							<p class="footer__copyright"><span>©</span> stv.ru, 2013</p>
+							<p><a href="#">Информационный портал<br> Ставрополя</a></p>
+							<span href="#" class="plus">0+</span>
+						</div>
+						<!-- /.footer -->
+					</div>
+				</div>
+				<!-- /.scroll-pane -->
+			</div>
+		</div>
+		<!-- /.sidebar -->
+	</div>
+	<!-- /.content -->
+</div>
+<!-- /.out -->
+
+<!-- BEGIN .pin -->
+<div class="pin" style="position:fixed; top:450px; left:800px;">
+		<span>1</span>
+		<!-- BEGIN .tooltip -->
+		<div class="tooltip">
+			<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
+			<div class="tooltip__tags">
+				<ul>
+					<li><a href="#">Автозапчасти для иномарок</a>,</li>
+					<li><a href="#">Автоаксессуары</a>,</li>
+					<li><a href="#">Автохимия</a>,</li>
+					<li><a href="#">Автостекло</a>,</li>
+					<li><a href="#">Интернет-магазины</a></li>
+				</ul>
+			</div>
+			<div>
+				<p><a href="#">Ипподромская, 44</a></p>
+				<p><strong>+7 (383) 284-19-94</strong></p>
+				<p><strong>+7 (383) 287-50-42</strong></p>
+				<p>Пн—Вс: 9...20 часов (без обеда)</p>
+			</div>
+			<div>
+				<p><a href="#">partclub.ru</a></p>
+				<p><a href="#">info@partclub.ru</a></p>
+			</div>
+			<p><a href="#">Карточка организации</a></p>
+		</div>
+		<!-- /.tooltip -->
+</div>
+<!-- /.pin -->
+
+<!-- BEGIN .map-widget -->
+<div id="map" class="map-widget"></div>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map ("map", {
+            center: [50.446019, 30.513318],
+            zoom: 16
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+<!-- /.map-widget -->
+</body>
+</html>

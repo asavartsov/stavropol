@@ -1,0 +1,190 @@
+@import "lib/base";
+
+//header
+.header{
+	position: relative;
+	background: #fff;
+	z-index: 1000;
+}
+	//header__topper
+	.header__topper{
+		height: 30px;
+		line-height: 30px;
+		background: #2c3d51;
+		color: #ddd;
+		padding-right: 85px;
+		text-transform: uppercase;
+		@extend %clr;
+		font-size: 11px;
+		a{
+			text-decoration: none;
+		}
+	}
+		.header__nav{
+			float: left;
+			margin-left: 75px;
+			li{
+				display: inline-block;
+				&.active{
+					background: #fff;
+					a{
+						color: #2c3b52;
+						cursor: default;
+					}
+				}
+			}
+			a{
+				color: #ddd;
+				display: block;
+				height: 100%;
+				padding: 0 12px;
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+		.header__profile{
+			float: right;
+			li{
+				display: inline-block;
+				margin-left: 10px;
+				position: relative;
+			}
+			a{
+				color: #e5c000;
+				&:hover,&.is-active{
+					color: #fff;
+				}
+			}
+			.icon-login{
+				font-size: 14px;
+				margin-right: 5px;
+				position: relative;
+				top: -3px;
+			}
+		}
+	//header__content
+	.header__content{
+		@extend %clr;
+		padding: 25px 50px 37px 70px;
+	}
+		.logo{
+			float: left;
+			margin-right: 13px;
+			margin-top: -5px;
+			line-height: 1;
+			a{
+				text-decoration: none;
+			}
+			.logo__name{
+				text-transform: uppercase;
+				color: #e7c200;
+				margin-bottom: -3px;
+				letter-spacing: 1px;
+				font-size: 30px;
+			}
+			.logo__category{
+				color: #2c3b52;
+				letter-spacing: 2px;
+				margin-bottom: 9px;
+				font-size: 30px;
+			}
+			.logo__city{
+				font-size: 8px;
+				color: #bdc3c7;
+				text-transform: uppercase;
+			}
+		}
+		.header__search{
+			float: left;
+			position: relative;
+			vertical-align: middle;
+			height: 60px;
+			line-height: 60px;
+			padding: 0 10px;
+			margin-top: 9px;
+			border-radius: 5px;
+			background: #ecf0f1;
+			font-size: 15px;
+			color: #2c3b53;
+			width: 760px;
+			&:before{
+				content: "";
+				position: absolute;
+				display: block;
+				border-style: solid;
+				border-color: transparent #ecf0f1 transparent transparent;
+				top: 50%;
+				left: -5px;
+				margin-top: -5px;
+				border-width: 5px 5px 5px 0;
+			}
+			strong{
+				font-weight: bold;
+				display: inline-block;
+			}
+			input{
+				display: inline-block;
+				height: 20px;
+				line-height: 20px;
+				padding: 10px;
+				font-size: 15px;
+				width: 250px;
+				margin-right: 5px;
+			}
+			.icon-search{
+				margin-right: 5px;
+				position: relative;
+				top: -2px;
+				font-size: 11px;
+			}
+			.btn{
+				display: inline-block;
+				position: relative;
+				top: 1px;
+				margin-bottom: 0;
+				margin-top: 2px;
+				text-align: center;
+				border: 1px solid transparent;
+				border-radius: 2px;
+				font-size: 13px;
+				width: 108px;
+				height: 40px;
+				line-height: 40px;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+
+		}
+		.header__links{
+			float: right;
+			vertical-align: top;
+			margin-top: 32px;
+			li{
+				float: left;
+				list-style: none;
+				margin-left: 40px;
+				position: relative;
+			}
+			a{
+				display: block;
+				line-height: 1;
+				color: #2c3b53;
+				text-decoration: none;
+				border-bottom: 1px dotted #2c3b53;
+				&:hover{
+					border-bottom: 1px dotted transparent;
+				}
+			}
+			.icon{
+				position: absolute;
+				top: 0;
+				left: 0;
+				&.icon-links{
+					left: -15px;
+				}
+				&.icon-pin{
+					left: -10px;
+				}
+			}
+		}

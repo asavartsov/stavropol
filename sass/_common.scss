@@ -16,7 +16,7 @@
 // ## animations easing, see easings.net for full list and examples, tnx @ai
 //     transition: all 1.2s ceaser($ease-in);
 // ## gradient example
-//     @include background-image(linear-gr adient(#232323, #5c5c5c));
+//     @include background-image(linear-gradient(#232323, #5c5c5c));
 // ## making bw-images
 //     img{@extend %gray;}
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
@@ -43,7 +43,6 @@ input[type="submit"]::-moz-focus-inner { padding: 0; border: 0 }
 
 body{
 	font: {
-		// family: Arial,sans-serif;
 		family: "Trebuchet MS", "Helvetica CY", sans-serif;
 		weight: normal;
 		size: 12px;
