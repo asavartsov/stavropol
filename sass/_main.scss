@@ -84,6 +84,41 @@ input{
 		}
 	}
 
+	.btn-warining{
+		@include border-radius(4px);
+		background: #e7c200;
+		color: #fff;
+		font-size: 13px;
+		font-weight: bold;
+		text-decoration: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		padding: 0 8px;
+		position: relative;
+		top: -23px;
+		left: 10px;
+		text-transform: uppercase;
+		&:hover{
+			background: darken(#e7c200, 5%);
+		}
+	}
+
+
+	.btn-inactive{
+		border-radius: 0 0 4px 4px;
+		text-transform: uppercase;
+		color: #ebf0f1;
+		font-weight: bold;
+		background: #bdc3c7;
+		display: inline-block;
+		width: 100%;
+		border: none;
+		height: 60px;
+		line-height: 60px;
+		cursor: default;
+	}
+
 // plus
 .plus{
 	display: inline-block;

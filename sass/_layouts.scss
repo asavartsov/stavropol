@@ -1,15 +1,16 @@
 @import "lib/base";
 /* default layout */
 .l{
+	position: relative;
 	width: 100%;
 	display: inline-block;
+	margin-bottom: 50px;
 	.l-col1{
 		float:left;
-		width: 20%;
+		width: 686px;
 	}
-
 	.l-col2{
-		float:right;
-		width: 70%;
+		float:left;
+		width: 280px;
 	}
 }
