@@ -49,6 +49,9 @@ body{
 	}
 	line-height:1.4;
 	min-width: 1280px;
+	@include respond-to(step1){
+		min-width: 100%;
+	}
 }
 // resets
 a img,fieldset{

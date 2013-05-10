@@ -90,8 +90,6 @@ $(document).ready(function() {
 	      $('.login-popup').fadeIn();
 	     }
 	    });
-
-	// ---------------- POPUP .js-links -------------------- //
 	    $('.js-links').click(function() {
 	     if ($(this).hasClass('is-open')) {
 	      $(".js-links").removeClass('is-open');
@@ -110,5 +108,26 @@ $(document).ready(function() {
 			$(this).select();
 		});
 
+
+	// ---------------- Dropdown menu -------------------- //
+		$("<select />").appendTo(".header__nav");
+
+		$("<option />", {
+		 "selected": "selected",
+		 "value"   : "",
+		 "text"    : "Меню"
+		}).appendTo(".header__nav select");
+
+		$(".header__nav a").each(function() {
+		var el = $(this);
+		$("<option />", {
+		   "value"   : el.attr("href"),
+		   "text"    : el.text()
+		}).appendTo(".header__nav select");
+		});
+
+		$(".header__nav select").change(function() {
+		window.location = $(this).find("option:selected").val();
+		});
 
 });

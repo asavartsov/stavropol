@@ -96,6 +96,9 @@
 	width: 242px;
 	background: #fafafa;
 	border-radius: 0 0 20px 20px;
+	@include respond-to(step1){
+		top: 31px;
+	}
 	&:before{
 		position: absolute;
 		content: "";

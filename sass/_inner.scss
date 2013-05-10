@@ -8,6 +8,9 @@
 		height: 100%;
 		margin: 0 0 -142px 86px;
 		z-index: 0;
+		@include respond-to(step1){
+			margin: 0 20px -142px 20px;
+		}
 	}
 	//inner header
 	.header{
@@ -16,6 +19,10 @@
 		margin-bottom: 40px;
 		@extend %clr;
 		background: none;
+		@include respond-to(step1){
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
 	}
 	//inner footer
 	.footer{
@@ -26,6 +33,9 @@
 		font-size: 13px;
 		margin-left: 85px;
 		margin-top: 0;
+		@include respond-to(step1){
+			margin-left: 40px;
+		}
 	}
 	//sticky footer
 	.footer, .push {
@@ -45,6 +55,9 @@
 			font-size: 36px;
 			line-height: 1.2;
 			display: inline-block;
+			@include respond-to(step1){
+				display: block;
+			}
 		}
 	//form
 	.form {
@@ -52,6 +65,9 @@
 		background: #ecf0f1;
 		padding: 27px 0 0 0;
 		width: 487px;
+		@include respond-to(step1){
+			width: auto;
+		}
 		input{
 			width: 92%;
 			line-height: 17px;
@@ -149,6 +165,11 @@
 				right: -185px;
 				font-size: 12px;
 				color: #ea4f2f;
+				@include respond-to(step1){
+					position: relative;
+					right: 0;
+					width: auto;
+				}
 				a{
 					font-size: 13px;
 					color: #ea4f2f;
@@ -166,6 +187,10 @@
 		padding: 0;
 		margin-left: 25px;
 		margin-top: 95px;
+		@include respond-to(step1){
+			margin-left: 20px;
+			margin-top: 40px;
+		}
 	}
 
 .socials{
@@ -222,7 +247,13 @@
 			color: #e57f18;
 		}
 	}
+}
 
+.btn-warining{
+	@include respond-to(step1){
+		top: 0;
+		left: 0;
+	}
 }
 
 }
