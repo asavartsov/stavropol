@@ -130,4 +130,7 @@ $(document).ready(function() {
 		window.location = $(this).find("option:selected").val();
 		});
 
+	// ---------------- Placeholder -------------------- //
+		$('[placeholder]').placeholder();
+
 });

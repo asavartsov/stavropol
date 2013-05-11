@@ -26,6 +26,8 @@ a { color: #00919e; }
 
 html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
 
+.placeholder { color: #999; }
+
 input { border: 1px solid #eee; outline: 0; -webkit-transition: border linear, box-shadow linear; -webkit-transition-delay: 0.2s, 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
 input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
 
@@ -358,7 +360,7 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .inner .header:after, .header__topper:after, .header__content:after { clear: both; }
 
 .pin { z-index: 1000; display: inline-block; text-decoration: none; }
-.pin span { position: relative; padding: 7px 12px; background: #277eba; color: #fff; cursor: pointer; }
+.pin span { position: relative; padding: 7px 12px; background: #277eba; color: #fff; cursor: pointer; display: block; }
 .pin span:after { position: absolute; bottom: -5px; left: 50%; margin-left: -5px; content: ""; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #277eba transparent transparent transparent; }
 
 .tooltip { position: absolute; z-index: 1000; bottom: -100px; left: 50%; margin-left: 100px; background: #fff; padding: 20px; width: 260px; font-weight: normal; border-radius: 4px; }
@@ -392,7 +394,7 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .login-popup .login-popup__form a:hover { text-decoration: none; }
 .login-popup .login-popup__form div { margin-bottom: 8px; }
 .login-popup .login-popup__form .request { margin-top: -2px; text-align: center; }
-.login-popup .btn { height: 40px; line-height: 40px; border-radius: 0 0 5px 5px; }
+.login-popup .btn { height: 40px; line-height: 40px; border-radius: 0 0 5px 5px; color: #ebf0f1; }
 
 .links-popup { display: none; position: absolute; top: 25px; left: -70px; color: #fff; background: #2c3c52; border-radius: 4px; padding: 10px; }
 .links-popup input { margin-top: 5px; outline: 0; border: 0; padding: 3px 8px; }

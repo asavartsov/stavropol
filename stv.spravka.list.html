@@ -9,6 +9,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
 	<script src="js/common.js"></script>
 	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
 </head>
@@ -49,7 +50,7 @@
 									<li><a href="#" title="Одноклассники"><i class="symbol icon icon-od">&#233;</i></a></li>
 								</ul>
 							</div>
-							<form class="login-popup__form">
+							<form class="login-popup__form" onsubmit="$('[placeholder]').placeholder('clear');">
 								<div class="login-popup__inner">
 									<h1 class="login-popup__heading">или используй:</h1>
 									<div>
@@ -62,7 +63,7 @@
 										<a href="#">Я забыл пароль</a>
 									</div>
 								</div>
-								<button type="submit" class="btn btn-success" disabled="">Войти</button>
+								<button type="submit" class="btn btn-success">Войти</button>
 							</form>
 						</div>
 						<!-- /.login-popup -->
@@ -88,7 +89,7 @@
 			<!-- /.logo -->
 			<!-- BEGIN .header__search -->
 			<div class="header__search">
-				<form>
+				<form onsubmit="$('[placeholder]').placeholder('clear');">
 					<strong>Что:</strong>
 					<input type="text" placeholder="Название, рубрика, телефон, сайт">
 					<strong>Где:</strong>

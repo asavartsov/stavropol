@@ -11,6 +11,7 @@
 		background: #277eba;
 		color: #fff;
 		cursor: pointer;
+		display: block;
 		&:after{
 			position: absolute;
 			bottom: -5px;
@@ -181,6 +182,7 @@
 		height: 40px;
 		line-height: 40px;
 		border-radius: 0 0 5px 5px;
+		color: #ebf0f1; 
 	}
 }
 
