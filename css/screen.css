@@ -259,7 +259,7 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 
 .header__search { float: left; position: relative; vertical-align: middle; height: 60px; line-height: 60px; padding: 0 10px; margin-top: 9px; border-radius: 5px; background: #ecf0f1; font-size: 15px; color: #2c3b53; width: 760px; }
 @media only screen and (max-width: 500px) { .header__search { height: auto; width: auto; } }
-.header__search:before { content: ""; position: absolute; display: block; border-style: solid; border-color: transparent #ecf0f1 transparent transparent; top: 50%; left: -5px; margin-top: -5px; border-width: 5px 5px 5px 0; }
+.header__search:before { content: ""; position: absolute; display: block; border-style: outset solid solid; border-color: transparent #ecf0f1 transparent transparent; top: 50%; left: -5px; margin-top: -5px; border-width: 5px 5px 5px 0; }
 @media only screen and (max-width: 500px) { .header__search:before { display: none; } }
 .header__search strong { font-weight: bold; display: inline-block; }
 @media only screen and (max-width: 500px) { .header__search strong { display: none; } }
