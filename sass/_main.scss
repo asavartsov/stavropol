@@ -39,6 +39,50 @@ input{
 		display: none;
 	}
 }
+//mark
+.mark{
+	display: inline-block;
+	position: relative;
+	height: 15px;
+	line-height: 15px;
+	padding: 0 5px;
+	@include border-radius(2px);
+}
+	.mark-orange{
+		color: #fff !important;
+		background: #d55800;
+		margin-right: 7px;
+		top: -1px;
+		&:after{
+			position: absolute;
+			top: 5px;
+			right: -2px;
+			content: "";
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 2.5px 0 2.5px 2px;
+			border-color: transparent transparent transparent #d55900;
+		}
+	}
+	.mark-white{
+		color: #2c3c52 !important;
+		background: #fff;
+		margin-right: 8px;
+		top: -1px;
+		&:after{
+			position: absolute;
+			top: 5px;
+			right: -2px;
+			content: "";
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 2.5px 0 2.5px 2px;
+			border-color: transparent transparent transparent #fff;
+		}
+	}
+
 
 //symbol
 .symbol{
@@ -62,6 +106,15 @@ input{
 		.icon-2gis{
 			@extend %hide-text;
 			@include sized-sprite($icons, ico_2gis);
+		}
+		.icon-logout{
+			position: relative;
+			top: -2px;
+			font-size: 13px;
+			color: #d92332;
+			&:hover{
+				color: #fff;
+			}
 		}
 
 //buttons

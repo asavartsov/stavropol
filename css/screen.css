@@ -34,6 +34,14 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .map-widget { width: 100%; height: 100%; position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
 @media only screen and (max-width: 500px) { .map-widget { display: none; } }
 
+.mark { display: inline-block; position: relative; height: 15px; line-height: 15px; padding: 0 5px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+
+.mark-orange { color: #fff !important; background: #d55800; margin-right: 7px; top: -1px; }
+.mark-orange:after { position: absolute; top: 5px; right: -2px; content: ""; width: 0px; height: 0px; border-style: solid; border-width: 2.5px 0 2.5px 2px; border-color: transparent transparent transparent #d55900; }
+
+.mark-white { color: #2c3c52 !important; background: #fff; margin-right: 8px; top: -1px; }
+.mark-white:after { position: absolute; top: 5px; right: -2px; content: ""; width: 0px; height: 0px; border-style: solid; border-width: 2.5px 0 2.5px 2px; border-color: transparent transparent transparent #fff; }
+
 .symbol { font-family: 'Web Symbols'; text-rendering: optimizeLegibility; font-weight: normal; font-style: normal; text-transform: none !important; }
 
 .icon { vertical-align: middle; display: inline-block; font-weight: normal; font-style: normal; }
@@ -47,6 +55,9 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .icon-od { color: #e58018; }
 
 .icon-2gis { background: url('../img/icons-s3a11d86a8b.png') 0 0 no-repeat; width: 30px; height: 15px; }
+
+.icon-logout { position: relative; top: -2px; font-size: 13px; color: #d92332; }
+.icon-logout:hover { color: #fff; }
 
 .btn { cursor: pointer; -webkit-transition: background linear; -webkit-transition-delay: 0.2s; -moz-transition: background linear 0.2s; -o-transition: background linear 0.2s; transition: background linear 0.2s; }
 
@@ -237,7 +248,8 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .header__nav li { display: inline-block; }
 .header__nav li.active { background: #fff; }
 .header__nav li.active a { color: #2c3b52; cursor: default; }
-.header__nav a { color: #ddd; display: block; height: 100%; padding: 0 12px; }
+.header__nav li.active a:hover { color: #bdc3c7; cursor: pointer; }
+.header__nav a { color: #bdc3c7; display: inline-block; height: 100%; padding: 0 12px; }
 .header__nav a:hover { color: #fff; }
 
 .header__profile { float: right; }
@@ -245,7 +257,16 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .header__profile li { display: inline-block; margin-left: 10px; position: relative; }
 .header__profile a { color: #e5c000; }
 .header__profile a:hover, .header__profile a.is-active { color: #fff; }
-.header__profile .icon-login { font-size: 14px; margin-right: 5px; position: relative; top: -3px; }
+.header__profile .header__fav span { padding-left: 5px; }
+.header__profile .header__fav .icon-fav { font-size: 13px; position: relative; top: -2px; }
+.header__profile .header__login a { color: #e5c000; }
+.header__profile .header__login a.is-active { color: #fff; }
+.header__profile .header__login .icon-login { font-size: 14px; margin-right: 5px; position: relative; top: -3px; }
+.header__profile .header__login:hover a, .header__profile .header__login:hover .icon-login { color: #fff; }
+.header__profile .header__user a { color: #fff; }
+.header__profile .header__user .icon-user { font-size: 13px; color: #fff; position: relative; top: -2px; margin-right: 5px; }
+.header__profile .header__user:hover a { color: #bdc3c7; }
+.header__profile .header__user:hover .icon-user { color: #bdc3c7; }
 
 .header__content { padding: 25px 50px 37px 70px; }
 @media only screen and (max-width: 500px) { .header__content { padding: 20px; } }
