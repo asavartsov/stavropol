@@ -42,6 +42,7 @@
 				}
 			}
 			li{
+				@extend %clr;
 				display: inline-block;
 				&.active{
 					background: #fff;
@@ -56,6 +57,7 @@
 				}
 			}
 			a{
+				float: left;
 				color: #bdc3c7;
 				display: inline-block;
 				height: 100%;
@@ -64,6 +66,12 @@
 					color: #fff;
 				}
 			}
+		}
+		.mark-white{
+			display: inline-block;
+		}
+		.header__mail{
+			float: right; 
 		}
 		.header__profile{
 			float: right;

@@ -89,6 +89,7 @@ $(document).ready(function() {
 	      $(this).addClass('is-active');
 	      $('.login-popup').fadeIn();
 	     }
+	     return false;
 	    });
 	    $('.js-links').click(function() {
 	     if ($(this).hasClass('is-open')) {
