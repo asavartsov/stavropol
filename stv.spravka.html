@@ -3,291 +3,383 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>stv.spravka</title>
+	<title>Template</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/jquery.js"></script>
-	<script src="js/baron.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
 	<script src="js/common.js"></script>
 	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
 </head>
 <body>
-	<!-- BEGIN .topper -->
-	<div class="topper">
-
-		<nav class="topper__nav" role="navigation">
-			<ul>
-				<li><a href="#">События</a></li>
-				<li><a href="#">Работа</a></li>
-				<li><a href="#">Недвижимость</a></li>
-				<li><a href="#">Автомобили</a></li>
-				<li><a href="#">Объfявления</a></li>
-				<li><a href="#">Справочник</a></li>
-				<li class="active"><a href="#">Почта</a></li>
-				<li><a href="#">Городской форум</a></li>
-			</ul>
-		</nav>
-
-		<ul class="topper__profile">
-			<li><a href="#"><i class="icon icon-login"></i> Войти</a></li>
-			<li class="is-active"><a href="#">Зарегистрироваться</a></li>
-		</ul>
-
-	</div>
-	<!-- /.topper -->
-
+<!-- BEGIN .out -->
+<div class="out">
 	<!-- BEGIN .header -->
-	<header class="header" role="banner">
-
-		<h1 class="header__logo"><a href="#" title="STV .Справочник Ставрополь">STV .Справочник Ставрополь</a></h1>
-
-		<div class="header__search">
-			<form>
-				<strong>Что:</strong>
-				<input type="text" placeholder="Название, рубрика, телефон, сайт">
-				<strong>Где:</strong>
-				<input type="text" placeholder="Улица, Адрес">
-				<button type="submit" class="btn btn-inverse"><i class="icon icon-search"></i>Найти</button>
-			</form>
-		</div>
-
-		<ul class="header__links">
-			<li><a href="#"><i class="icon icon-url"></i>Ссылка</a>
-				<!-- BEGIN .header__links-popup -->
-				<div class="header__links-popup">
-					<div class="header__links-popup-wrap">
-						<span>Прямая ссылка на карту:</span>
-						<input type="text" readonly="readonly" value="maps.stv.ru/ly?qBd">
-					</div>
-				</div>
-				<!-- /.header__links-popup -->
-			</li>
-			<li><a href="#"><i class="icon icon-location"></i>Карта</a>
-				<!-- BEGIN .header__links-popup -->
-				<div class="header__links-popup header__links-popup_mod">
-					<div class="header__links-popup-wrap">
-						<ul>
-							<li><a href="#"><span class="mark-ya">Я</span>ндекс.Карты</a></li>
-							<li><a href="#"><span class="mark-2gis">2GIS</span>.Карты</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /.header__links-popup -->
-			</li>
-		</ul>
-
-	</header>
-	<!-- /.header -->
-
-	<!-- BEGIN .content -->
-	<div class="content" role="main">
-		<!-- BEGIN .sidebar -->
-		<aside class="sidebar js-sidebar">
-			<div class="sidebar__wrap">
-				<!-- BEGIN .catalog -->
-				<div class="catalog">
-					<h1 class="catalog__title"><a href="#">Каталог организаций города</a></h1>
-					<!-- BEGIN .baron -->
-					<div class="baron__in js-baron-list">
-					    <div class="baron__scroller">
-						        <div class="container">
-									<!-- BEGIN .catalog__list -->
-									<ul class="catalog__list">
-										<li><a href="#" class="js-accord">Аварийные / Справочные / Экстренные службы</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Автосервис / Автотовары</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Город / Власть</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Досуг / Развлечения / Общественное</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Интернет / Связь / Информационные технологии</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Коммунальные / Бытовые / Ритуальные услуги</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Компьютеры / Бытовая техника / Офисная техника</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Культура / Искусство / Религия</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-										<li>
-											<a href="#" class="js-accord">Мебель / Фурнитура / Материалы</a>
-											<ul class="js-accord-body">
-												<li><a href="#">Управление ГО и ЧС</a></li>
-												<li><a href="#">Скорая медицинская помощь</a></li>
-												<li><a href="#">Службы спасения</a></li>
-												<li><a href="#">Службы экстренного вызова</a></li>
-												<li><a href="#">Телефоны доверия</a></li>
-												<li><a href="#">Независимые службы аварийных комиссаров</a></li>
-												<li><a href="#">Штрафстоянки</a></li>
-												<li><a href="#">Эвакуация автомобилей</a></li>
-												<li><a href="#">Справочно-информационные услуги</a></li>
-												<li><a href="#">Пожарная охрана</a></li>
-												<li><a href="#">Аварийные службы</a></li>
-											</ul>
-										</li>
-									</ul>
-									<!-- /.catalog__list -->
-						        </div>
-						        <div class="baron__scrollerbar-wrapper">
-						            <div class="baron__scrollerbar"></div>
-						        </div>
-					    </div>
-					</div>
-					<!-- /.baron -->
-				</div>
-				<!-- /.catalog -->
-				<button class="sidebar-key is-active js-sidebar-key"><i></i></button>
-				<!-- BEGIN .footer -->
-				<footer class="footer">
-					<div class="footer__info">Информация предоставлена <a href="#" title="2GIS"><i class="icon icon-2gis">2GIS</i></a></div>
-					<div class="footer__copyright"><span>&copy;</span> stv.ru, 2013</div>
-					<div class="footer__text"><a href="#">Информационный портал<br> Ставрополя</a></div>
-					<a href="#" class="plus">0+</a>
-				</footer>
-				<!-- /.footer -->
+	<div class="header">
+		<!-- BEGIN .header__topper -->
+		<div class="header__topper">
+			<!-- BEGIN .header__nav -->
+			<div class="header__nav">
+				<ul>
+					<li><a href="#">События</a></li>
+					<li><a href="#">Работа</a></li>
+					<li><a href="#">Недвижимость</a></li>
+					<li><a href="#">Автомобили</a></li>
+					<li><a href="#">Объявления</a></li>
+					<li class="active"><a href="#">Справочник</a></li>
+					<li><a href="#"><span class="header__mail">Почта</span> <span class="mark mark-white">5</span></a></li>
+					<li><a href="#">Городской форум</a></li>
+				</ul>
 			</div>
-		</aside>
+			<!-- /.header__nav -->
+			<!-- BEGIN .header__profile -->
+			<div class="header__profile">
+				<ul>
+					<li class="header__fav">
+						<a href="#"><i class="icon icon-fav"></i><span>Избранное — 2</span></a>
+					</li>
+					<li class="header__login">
+						<a href="#" class="js-login"><i class="icon icon-login"></i>Войти</a>
+						<!-- BEGIN .login-popup -->
+						<div class="login-popup">
+							<div class="login-popup__socials">
+								<h1 class="login-popup__heading">через соцсети</h1>
+								<ul>
+									<li><a href="#" title="Facebook"><i class="icon icon-fb"></i></a></li>
+									<li><a href="#" title="Twitter"><i class="icon icon-tw"></i></a></li>
+									<li><a href="#" title="Вконтакте"><i class="icon icon-vk"></i></a></li>
+									<li><a href="#" title="Одноклассники"><i class="icon icon-od"></i></a></li>
+								</ul>
+							</div>
+							<form class="login-popup__form" onsubmit="$('[placeholder]').placeholder('clear');">
+								<div class="login-popup__inner">
+									<h1 class="login-popup__heading">или используй:</h1>
+									<div class="error">
+										<input type="text" placeholder="Логин">
+										<div class="error__message"><span>К сожалению, логин или пароль не верные</span></div>
+									</div>
+									<div class="error">
+										<input type="password" placeholder="Пароль">
+									</div>
+									<div class="request">
+										<a href="#">Я забыл пароль</a>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-success">Войти</button>
+							</form>
+						</div>
+						<!-- /.login-popup -->
+					</li>
+					<li>
+						<a href="#">Зарегистрироваться</a>
+					</li>
+					<li class="header__user">
+						<a href="#"><span class="mark mark-orange">23</span><i class="icon icon-user"></i>Мои объявления</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon icon-logout"></i></a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.header__profile -->
+		</div>
+		<!-- /.header__topper -->
+		<!-- BEGIN .header__content -->
+		<div class="header__content">
+			<!-- BEGIN .logo -->
+			<h1 class="logo">
+				<a href="#" title="STV .Справочник Ставрополь">
+					<div class="logo__name">stv</div>
+					<div class="logo__category">.справочник</div>
+					<div class="logo__city">Ставрополь</div>
+				</a>
+			</h1>
+			<!-- /.logo -->
+			<!-- BEGIN .header__search -->
+			<div class="header__search">
+				<form onsubmit="$('[placeholder]').placeholder('clear');">
+					<strong>Что:</strong>
+					<input type="text" placeholder="Название, рубрика, телефон, сайт">
+					<strong>Где:</strong>
+					<input type="text" placeholder="Улица, Адрес">
+					<button type="submit" class="btn btn-inverse">
+						<i class="icon icon-search"></i>Найти
+					</button>
+				</form>
+			</div>
+			<!-- /.header__search -->
+			<!-- BEGIN .header__links -->
+			<div class="header__links">
+				<ul>
+					<li>
+						<a class="js-links" href="#"><i class="icon icon-links"></i>Ссылка</a>
+						<!-- BEGIN .linkspopup -->
+						<div class="js-popups links-popup">
+							<div class="links-popup__wrap">
+								<span>Прямая ссылка на карту:</span>
+								<input class="js-input" type="text" readonly="readonly" value="maps.stv.ru/ly?qBd">
+							</div>
+						</div>
+						<!-- /.linkspopup -->
+					</li>
+					<li>
+						<a class="js-links" href="#"><i class="icon icon-pin"></i>Карта</a>
+						<!-- BEGIN .maps-popup -->
+						<div class="js-popups maps-popup">
+							<div class="maps-popup__wrap">
+								<ul>
+									<li>
+										<a href="#"><span class="mark-ya">Я</span>ндекс.Карты</a>
+									</li>
+									<li>
+										<a href="#"><span class="mark-2gis">2GIS</span>.Карты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /.maps-popup -->
+					</li>
+				</ul>
+			</div>
+			<!-- /.header__links -->
+		</div>
+		<!-- /.header__content -->
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .content -->
+	<div class="content">
+		<!-- BEGIN .sidebar -->
+		<div class="sidebar js-sidebar">
+				<button class="sidebar-key js-sidebar-key is-active"><i class="symbol js-icon icon">&#212;</i></button>
+			<div class="sidebar__wrap">
+				<!-- BEGIN .scroll-pane -->
+				<div class="scroll-pane">
+					<div class="sidebar__content">
+						<!-- BEGIN .catalog -->
+						<div class="catalog">
+							<a class="catalog-link" href="#">Каталог организаций города</a>
+							<!-- BEGIN .catalog__list -->
+							<ul class="catalog__list">
+								<li>
+									<a href="#" class="js-accord">
+										<span>Аварийные / Справочные / Экстренные службы</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Автосервис / Автотовары</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Город / Власть</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Досуг / Развлечения / Общественное</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Интернет / Связь / Информационные технологии</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Коммунальные / Бытовые / Ритуальные услуги</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Компьютеры / Бытовая техника / Офисная техника</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Культура / Искусство / Религия</span>
+									</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="js-accord">
+										<span>Мебель / Фурнитура / Материалы</span>
+								</a>
+									<ul class="js-accord-body">
+										<li><a href="#">Управление ГО и ЧС</a></li>
+										<li><a href="#">Скорая медицинская помощь</a></li>
+										<li><a href="#">Службы спасения</a></li>
+										<li><a href="#">Службы экстренного вызова</a></li>
+										<li><a href="#">Телефоны доверия</a></li>
+										<li><a href="#">Независимые службы аварийных комиссаров</a></li>
+										<li><a href="#">Штрафстоянки</a></li>
+										<li><a href="#">Эвакуация автомобилей</a></li>
+										<li><a href="#">Справочно-информационные услуги</a></li>
+										<li><a href="#">Пожарная охрана</a></li>
+										<li><a href="#">Аварийные службы</a></li>
+									</ul>
+								</li>
+							</ul>
+							<!-- /.catalog__list -->
+						</div>
+						<!-- /.catalog -->
+						<!-- BEGIN .footer -->
+						<div class="footer">
+							<p>Информация предоставлена <a href="#" title="2GIS"><i class="icon icon-2gis">2GIS</i></a></p>
+							<p class="footer__copyright"><span>©</span> stv.ru, 2013</p>
+							<p><a href="#">Информационный портал<br> Ставрополя</a></p>
+							<span href="#" class="plus">0+</span>
+						</div>
+						<!-- /.footer -->
+					</div>
+				</div>
+				<!-- /.scroll-pane -->
+			</div>
+		</div>
 		<!-- /.sidebar -->
 	</div>
 	<!-- /.content -->
-<!-- BEGIN .tooltip -->
-<div class="tooltip" style="position:fixed; top:280px; left: 50%;">
-	<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
-	<div class="tooltip__tags"><a href="#">Автозапчасти для иномарок</a>, <a href="#">Автоаксессуары</a>, <a href="#">Автохимия</a>, <a href="#">Автостекло</a>, <a href="#">Интернет-магазины</a></div>
-	<div class="tooltip__info">
-		<p><a href="#">Ипподромская, 44</a></p>
-		<p><strong>+7 (383) 284-19-94</strong></p>
-		<p><strong>+7 (383) 287-50-42</strong></p>
-		<p>Пн—Вс: 9...20 часов (без обеда)</p>
-	</div>
-	<div class="tooltip__info">
-		<p><a href="#">partclub.ru</a></p>
-		<p><a href="#">info@partclub.ru</a></p>
-	</div>
-	<p><a href="#">Карточка организации</a></p>
 </div>
-<!-- /.tooltip -->
+<!-- /.out -->
 
 <!-- BEGIN .pin -->
-<a href="#" class="pin" style="position:fixed; top:300px; left:850px;"><span>5</span></a>
-<a href="#" class="pin" style="position:fixed; top:400px; left:880px;"><span>4</span></a>
-<div class="pin" style="position:fixed; top:300px; left:1400px;"><span>3</span></div>
-<div class="pin" style="position:fixed; top:370px; left:1350px;"><span>2</span></div>
+<div class="pin" style="position:fixed; top:450px; left:800px;">
+		<span>1</span>
+		<!-- BEGIN .tooltip -->
+		<div class="tooltip">
+			<h1 class="tooltip__title">Партклуб, интернет-магазин автотоваров для иномарок</h1>
+			<div class="tooltip__tags">
+				<ul>
+					<li><a href="#">Автозапчасти для иномарок</a>,</li>
+					<li><a href="#">Автоаксессуары</a>,</li>
+					<li><a href="#">Автохимия</a>,</li>
+					<li><a href="#">Автостекло</a>,</li>
+					<li><a href="#">Интернет-магазины</a></li>
+				</ul>
+			</div>
+			<div>
+				<p><a href="#">Ипподромская, 44</a></p>
+				<p><strong>+7 (383) 284-19-94</strong></p>
+				<p><strong>+7 (383) 287-50-42</strong></p>
+				<p>Пн—Вс: 9...20 часов (без обеда)</p>
+			</div>
+			<div>
+				<p><a href="#">partclub.ru</a></p>
+				<p><a href="#">info@partclub.ru</a></p>
+			</div>
+			<p><a href="#">Карточка организации</a></p>
+		</div>
+		<!-- /.tooltip -->
+</div>
 <!-- /.pin -->
 
-<!-- BEGIN #Yandex-Map -->
-<div id="map"></div>
+<!-- BEGIN .map-widget -->
+<div id="map" class="map-widget"></div>
 <script type="text/javascript">
     ymaps.ready(init);
     var myMap,
@@ -302,7 +394,6 @@
         myMap.geoObjects.add(myPlacemark);
     }
 </script>
-<!-- /#Yandex-Map -->
-
+<!-- /.map-widget -->
 </body>
 </html>

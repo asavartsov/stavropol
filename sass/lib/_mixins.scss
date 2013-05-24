@@ -1,12 +1,8 @@
-// responsive example, edit or remove
+// responsive example, needs to be edited
 $break-small: 500px;
-$break-large: 1180px;
 @mixin respond-to($media) {
-	@if $media == pda {
+	@if $media == step1 {
 		@media only screen and (max-width: $break-small) { @content; }
-	}
-	@else if $media == wide {
-		@media only screen and (min-width: $break-large) { @content; }
 	}
 }
 // retina bg
@@ -106,12 +102,6 @@ $break-large: 1180px;
 	& ::-moz-selection {
 		@content;
 	}
-}
-// box-sizing
-@mixin box-sizing($var) {
-     -moz-box-sizing: $var;
-  -webkit-box-sizing: $var;
-          box-sizing: $var;
 }
 // sized sprites
 @mixin image-size($path){

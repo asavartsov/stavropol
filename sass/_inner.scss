@@ -1,0 +1,259 @@
+@import "lib/base";
+
+//inner pages
+.inner {
+	.out{
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 0 -142px 86px;
+		z-index: 0;
+		@include respond-to(step1){
+			margin: 0 20px -142px 20px;
+		}
+	}
+	//inner header
+	.header{
+		padding-top: 39px;
+		margin-left: -18px;
+		margin-bottom: 40px;
+		@extend %clr;
+		background: none;
+		@include respond-to(step1){
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+	}
+	//inner footer
+	.footer{
+		//position: fixed;
+		position: relative;
+		height: 142px;
+		color: #7f8c8d;
+		font-size: 13px;
+		margin-left: 85px;
+		margin-top: 0;
+		@include respond-to(step1){
+			margin-left: 40px;
+		}
+	}
+	//sticky footer
+	.footer, .push {
+		height: 142px;
+	}
+	//authorization
+	.auth__title{
+		margin-bottom: 24px;
+		position: relative;
+		p{
+			font-size: 20px;
+			color: #666;
+		}
+	}
+		.title{
+			color: #2c3d51;
+			font-size: 36px;
+			line-height: 1.2;
+			display: inline-block;
+			@include respond-to(step1){
+				display: block;
+			}
+		}
+	//form
+	.form {
+		@include border-radius(4px);
+		background: #ecf0f1;
+		padding: 27px 0 0 0;
+		width: 487px;
+		@include respond-to(step1){
+			width: auto;
+		}
+		input{
+			width: 92%;
+			line-height: 17px;
+			font-size: 17px;
+			padding: 9px 3%;
+			&.form__login{
+				width: 60%;
+				color: #94a5a5;
+			}
+		}
+		a{
+			font-size: 13px;
+			color: #2c3d51;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		span{
+			color: #2c3d51;
+			font-size: 16px;
+			margin-left: 10px;
+			display: inline-block;
+		}
+	}
+	.form__wrap{
+		margin: 0 38px;
+	}
+	.form__line{
+		margin-bottom: 24px;
+	}
+	.form__label{
+		font-size: 14px;
+		color: #444;
+		display: inline-block;
+		margin-bottom: 0.2em;
+		margin-left: 2px;
+	}
+	.form__request{
+		text-align: center;
+		margin-top: -15px;
+	}
+	.form__info{
+		color: #aaa;
+		font-size: 13px;
+		line-height: 1.2;
+		margin-top: 5px;
+	}
+	.form__btn{
+		.btn{
+			font-size: 14px;
+		}
+	}
+	.form__controls{
+		position: relative;
+		.icon{
+			position: absolute;
+			top: 8px;
+			right: -20px;
+			font-size: 17px;
+		}
+			.icon-error{
+				color: #e84d38;
+			}
+			.icon-success{
+				color: #00be99;
+			}
+	}
+
+	.formline__error{
+		.form__label{
+			font-size: 14px;
+			color: #ea4f2f;
+			display: inline-block;
+			margin-bottom: 0.2em;
+		}
+		input{
+			color: #ea4f2f;
+			outline: 0;
+			@include transition(border linear 0.2s, box-shadow linear 0.2s);
+			border: 1px solid #eee;
+			border-color: rgba(236, 82, 107, 0.8);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(236, 82, 107, 0.6);
+			&:focus{
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				border-color: 0;
+				border: 1px solid #eee;
+			}
+		}
+
+			.form__errorinfo{
+				position: absolute;
+				width: 140px;
+				top: 5px;
+				right: -185px;
+				font-size: 12px;
+				color: #ea4f2f;
+				@include respond-to(step1){
+					position: relative;
+					right: 0;
+					width: auto;
+				}
+				a{
+					font-size: 13px;
+					color: #ea4f2f;
+					text-decoration: underline;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+		}
+	}
+	.sidebar{
+		background: none;
+		width: auto;
+		position: relative;
+		padding: 0;
+		margin-left: 25px;
+		margin-top: 95px;
+		@include respond-to(step1){
+			margin-left: 20px;
+			margin-top: 40px;
+		}
+	}
+
+.socials{
+	.h1{
+		text-transform: uppercase;
+		color: #7f8c8d;
+		font-size: 10px;
+		font-weight: normal;
+	}
+	ul{
+		margin-top: 20px;
+	}
+	li{
+		list-style: none;
+		text-transform: lowercase;
+		font-size: 16px;
+		color: #4a63ac;
+		margin-bottom: 15px;
+		&:hover{
+			a{
+				color: #7f8c8d !important;
+			}
+			.icon{
+				color: #7f8c8d;
+			}
+		}
+	}
+	a{
+		text-decoration: none;
+	}
+	.icon{
+		margin-right: 6px;
+		margin-top: -6px;
+		font-size: 20px;
+		@include transition(all linear 0.2s);
+	}
+	.socials__fb{
+		a{
+			color: #4a63ac;
+		}
+	}
+	.socials__tw{
+		a{
+			color: #27a9e4;
+		}
+	}
+	.socials__vk{
+		a{
+			color: #2c4670;
+		}
+	}
+	.socials__od{
+		a{
+			color: #e57f18;
+		}
+	}
+}
+
+.btn-warining{
+	@include respond-to(step1){
+		top: 0;
+		left: 0;
+	}
+}
+
+}

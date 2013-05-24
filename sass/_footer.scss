@@ -1,0 +1,25 @@
+@import "lib/base";
+
+//footer
+.footer{
+	margin-top: 20px;
+	width: 260px;
+	color: #7f8c8d;
+	font-size: 13px;
+	a{
+		color: #7f8c8d;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	p{
+		margin-bottom: 0.8em;
+	}
+	.footer__copyright{
+		text-transform: uppercase;
+		margin-bottom: 0.6em;
+		span{
+			margin-left: -15px;
+		}
+	}
+}

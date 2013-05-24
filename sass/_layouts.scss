@@ -2,21 +2,26 @@
 /* default layout */
 .l{
 	position: relative;
-	z-index: 2000;
 	width: 100%;
 	display: inline-block;
 	margin-bottom: 50px;
+	@include respond-to(step1){
+		margin-bottom: 20px;
+	}
 	.l-col1{
 		float:left;
 		width: 686px;
+		@include respond-to(step1){
+			float: none;
+			width: auto;
+		}
 	}
-
 	.l-col2{
 		float:left;
 		width: 280px;
+		@include respond-to(step1){
+			float: none;
+			width: auto;
+		}
 	}
-}
-// content
-.content{
-
 }

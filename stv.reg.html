@@ -3,26 +3,32 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>stv - reg-error</title>
+	<title>Template</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/jquery.js"></script>
-	<script src="js/baron.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+		<script src="js/jquery.placeholder.js"></script>
 	<script src="js/common.js"></script>
 	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
 </head>
-<body class="alt">
+<body class="inner">
 
 <!-- BEGIN .out -->
 <div class="out">
-
-
 	<!-- BEGIN .header -->
-	<header class="header" role="banner">
-
-		<h1 class="header__logo"><a href="#" title="STV .Работа Ставрополь">STV .Работа Ставрополь</a></h1>
-
-	</header>
+	<div class="header">
+		<!-- BEGIN .logo -->
+		<h1 class="logo">
+			<a href="#" title="STV .Работа Ставрополь">
+				<div class="logo__name">stv</div>
+				<div class="logo__category">.работа</div>
+				<div class="logo__city">Ставрополь</div>
+			</a>
+		</h1>
+		<!-- /.logo -->
+	</div>
 	<!-- /.header -->
 
 	<div class="l">
@@ -36,32 +42,31 @@
 			</div>
 			<!-- /.auth__title -->
 			<!-- BEGIN .form -->
-			<form class="form">
+			<form class="form" onsubmit="$('[placeholder]').placeholder('clear');">
 				<div class="form__wrap">
 					<div class="form__line">
 						<label class="form__label">Ваше имя</label>
 						<div class="form__controls">
-							<input type="text" value="Евгений">
+							<input type="text">
 						</div>
 					</div>
 					<div class="form__line">
 						<label class="form__label">Фамилия</label>
 						<div class="form__controls">
-							<input type="text" value="Теслов">
+							<input type="text">
 						</div>
 					</div>
-					<div class="form__line  formline__success">
+					<div class="form__line">
 						<label class="form__label">Логин</label>
 						<div class="form__controls">
-							<input class="form__login" type="text" value="eteslov">
+							<input class="form__login" type="text">
 							<span>@stv.ru</span>
 						</div>
 					</div>
-					<div class="form__line formline__error">
+					<div class="form__line">
 						<label class="form__label">Пароль</label>
 						<div class="form__controls">
-							<input type="password" value="●●●●●●">
-							<div class="form__errorifno">Извините, но допустипо использовать только латинские знаки</div>
+							<input type="password">
 						</div>
 					</div>
 					<div class="form__line">
@@ -73,7 +78,7 @@
 					</div>
 				</div>
 				<div class="form__btn">
-						<button type="submit" class="btn btn-success">Зарегистрироваться и создать резюме</button>
+						<button type="submit" class="btn btn-inactive">Зарегистрироваться</button>
 				</div>
 			</form>
 			<!-- /.form -->
@@ -92,20 +97,17 @@
 			<!-- /.socials -->
 		</div>
 	</div>
-
 	<div class="push"></div>
-
 </div>
 <!-- /.out -->
 
 <!-- BEGIN .footer -->
-<footer class="footer">
-	<div class="footer__copyright"><span>&copy;</span> stv.ru, 2013</div>
-	<div class="footer__text"><a href="#">Информационный портал<br> Ставрополя</a></div>
-	<a href="#" class="plus">16+</a>
-</footer>
+<div class="footer">
+	<p class="footer__copyright"><span>©</span> stv.ru, 2013</p>
+	<p><a href="#">Информационный портал<br> Ставрополя</a></p>
+	<span href="#" class="plus">16+</span>
+</div>
 <!-- /.footer -->
-
 
 </body>
 </html>

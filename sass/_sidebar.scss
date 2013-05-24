@@ -1,0 +1,42 @@
+@import "lib/base";
+
+//sidebar
+.sidebar{
+	float: left;
+	position: relative;
+	width: 367px;
+	z-index: 1000;
+	background: #fcfcfc;
+	@include respond-to(step1){
+		width: 100%;
+	}
+	.sidebar__wrap{
+		position: relative;
+		padding: 15px 0;
+	}
+	.sidebar__content{
+		margin-left: 84px;
+		margin-right: 15px;
+		@include respond-to(step1){
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+	}
+	.sidebar-key{
+		position: absolute;
+		top: 50%;
+		right: -21px;
+		margin-top: -20px;
+		width: 22px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+		background: #fcfcfc;
+		border: 0;
+		cursor: pointer;
+		border-radius: 0 3px 3px 0;
+		@include respond-to(step1){
+			display: none;
+		}
+	}
+}
