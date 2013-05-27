@@ -229,7 +229,7 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .inner .socials li:hover a { color: #7f8c8d !important; }
 .inner .socials li:hover .icon { color: #7f8c8d; }
 .inner .socials a { text-decoration: none; }
-.inner .socials .icon { margin-right: 6px; margin-top: -6px; font-size: 20px; -webkit-transition: all linear; -webkit-transition-delay: 0.2s; -moz-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
+.inner .socials .icon { margin-right: 6px; margin-top: -6px; font-size: 20px; }
 .inner .socials .socials__fb a { color: #4a63ac; }
 .inner .socials .socials__tw a { color: #27a9e4; }
 .inner .socials .socials__vk a { color: #2c4670; }
@@ -281,6 +281,7 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .header__profile .header__fav:hover a { color: #e5c000; }
 .header__profile .header__login a { color: #e5c000; }
 .header__profile .header__login a.is-active { color: #fff; }
+.header__profile .header__login a.is-active .icon-login { background: url('../img/icons-scc04988816.png') 0 -380px no-repeat; width: 9px; height: 12px; }
 .header__profile .header__login .icon-login { font-size: 14px; margin-right: 5px; position: relative; top: -3px; }
 .header__profile .header__login:hover a, .header__profile .header__login:hover .icon-login { color: #fff; }
 .header__profile .header__login:hover .icon-login { background: url('../img/icons-scc04988816.png') 0 -380px no-repeat; width: 9px; height: 12px; }
@@ -425,7 +426,6 @@ input:focus { border: 1px solid #287ebb; border-color: rgba(82, 168, 236, 0.8); 
 .login-popup .login-popup__socials ul { text-align: center; }
 .login-popup .login-popup__socials li { float: none; display: inline-block; line-height: 1; margin-right: 6px; }
 .login-popup .login-popup__socials li:first-child { margin-left: 0; }
-.login-popup .login-popup__socials .icon { -webkit-transition: all linear; -webkit-transition-delay: 0.2s; -moz-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
 .login-popup .login-popup__socials .icon:hover { color: #7f8c8d; }
 .login-popup .login-popup__socials .icon { font-size: 20px; }
 .login-popup .login-popup__form { padding: 10px 0 0 0; width: 100%; background: #ecf0f1; border-radius: 0 0 5px 5px; }

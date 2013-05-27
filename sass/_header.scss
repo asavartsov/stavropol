@@ -109,6 +109,9 @@
 					color: #e5c000;
 					&.is-active{
 						color: #fff;
+						.icon-login{
+							@include sized-sprite($icons, ico_login_hover);
+						}
 					}
 				}
 				.icon-login{
