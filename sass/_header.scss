@@ -276,7 +276,7 @@
 				margin-left: 40px;
 				position: relative;
 			}
-			a{
+			a, .js-links{
 				display: block;
 				line-height: 1;
 				color: #2c3b53;
@@ -284,6 +284,7 @@
 				border-bottom: 1px dotted #2c3b53;
 				&:hover{
 					border-bottom: 1px dotted transparent;
+					cursor: pointer;
 				}
 			}
 			.icon{
